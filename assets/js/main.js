@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Клік на Послуги в мобільному режимі розгортає підменю
   dropdownToggle?.addEventListener('click', (e) => {
-    if (window.innerWidth <= 1024) {
+    if (window.innerWidth <= 1200) {
       e.preventDefault();
       dropdownContainer?.classList.toggle('active');
     }
@@ -75,32 +75,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 4. Перемикання вкладок послуг (Service Tabs)
-  const tabBtns = document.querySelectorAll('.tab-btn');
-  const tabPanels = document.querySelectorAll('.tab-content-panel');
+  // 4. Перемикання вкладок послуг (Scoped Tabs)
+  document.querySelectorAll('.services-nav-tabs').forEach(tabNav => {
+    const parentContainer = tabNav.closest('section') || tabNav.parentElement;
+    const btns = tabNav.querySelectorAll('.tab-btn');
+    const panels = parentContainer.querySelectorAll('.tab-content-panel');
 
-  tabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const targetTab = btn.getAttribute('data-tab');
+    btns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetTab = btn.getAttribute('data-tab');
 
-      tabBtns.forEach(b => b.classList.remove('active'));
-      tabPanels.forEach(p => p.classList.remove('active'));
+        btns.forEach(b => b.classList.remove('active'));
+        panels.forEach(p => p.classList.remove('active'));
 
-      btn.classList.add('active');
-      const activePanel = document.getElementById(targetTab);
-      if (activePanel) {
-        activePanel.classList.add('active');
-      }
+        btn.classList.add('active');
+        const activePanel = parentContainer.querySelector('#' + targetTab);
+        if (activePanel) {
+          activePanel.classList.add('active');
+        }
+      });
     });
   });
 
   // Синхронізація кліків з випадаючого списку та швидких карток
   const switchServiceTab = (tabId) => {
-    tabBtns.forEach(btn => {
-      if (btn.getAttribute('data-tab') === tabId) {
-        btn.click();
-      }
-    });
+    const targetBtn = document.querySelector(`.tab-btn[data-tab="${tabId}"]`);
+    if (targetBtn) {
+      targetBtn.click();
+    }
   };
 
   dropdownItems.forEach(item => {
@@ -117,10 +119,10 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.quick-card').forEach(card => {
     card.addEventListener('click', () => {
       const href = card.getAttribute('href');
-      if (href === '#participants') switchServiceTab('tab-participants');
-      else if (href === '#customers') switchServiceTab('tab-customers');
-      else if (href === '#prozorro-sale') switchServiceTab('tab-prozorro-sale');
-      else if (href === '#law-practice') switchServiceTab('tab-law-practice');
+      if (href === '#prozorro-participants') switchServiceTab('tab-prozorro-participants');
+      else if (href === '#prozorro-customers') switchServiceTab('tab-prozorro-customers');
+      else if (href === '#cert-products') switchServiceTab('tab-cert-products');
+      else if (href === '#cert-iso') switchServiceTab('tab-cert-iso');
     });
   });
 
