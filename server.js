@@ -14,7 +14,9 @@ const MIME_TYPES = {
   '.webp': 'image/webp',
   '.svg': 'image/svg+xml',
   '.ico': 'image/x-icon',
-  '.php': 'text/plain; charset=utf-8'
+  '.php': 'text/plain; charset=utf-8',
+  '.docx': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+  '.doc': 'application/msword'
 };
 
 const server = http.createServer((req, res) => {

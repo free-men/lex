@@ -46,31 +46,78 @@
 
       <!-- Меню навігації -->
       <nav class="main-nav" id="mainNav">
-        <div class="nav-item-dropdown">
-          <a href="#services" class="nav-link dropdown-toggle" id="servicesDropdownToggle">
+        <!-- Випадаюче меню Послуги -->
+        <div class="nav-item-dropdown" id="servicesDropdownContainer">
+          <a href="#prozorro" class="nav-link dropdown-toggle" id="servicesDropdownToggle" role="button" aria-haspopup="true" aria-expanded="false">
             Послуги <i class="fas fa-chevron-down nav-dropdown-icon"></i>
           </a>
-          <div class="nav-dropdown-menu">
-            <a href="#participants" class="dropdown-item" data-tab-trigger="tab-participants">
-              <i class="fas fa-users-gear"></i> Для Учасників торгів
+          <div class="nav-dropdown-menu" id="servicesDropdownMenu">
+            <a href="#prozorro" class="dropdown-item">
+              <div class="dropdown-item-icon"><i class="fas fa-file-contract"></i></div>
+              <div class="dropdown-item-text">
+                <span class="dropdown-item-title">ПРОЗОРРО</span>
+                <span class="dropdown-item-sub">Публічні закупівлі для учасників та замовників</span>
+              </div>
             </a>
-            <a href="#customers" class="dropdown-item" data-tab-trigger="tab-customers">
-              <i class="fas fa-building-columns"></i> Для Замовників торгів
+            <a href="#prozorro-sale" class="dropdown-item">
+              <div class="dropdown-item-icon"><i class="fas fa-hand-holding-dollar"></i></div>
+              <div class="dropdown-item-text">
+                <span class="dropdown-item-title">Prozorro.Sale</span>
+                <span class="dropdown-item-sub">Аукціони малої приватизації та оренда майна</span>
+              </div>
             </a>
-            <a href="#prozorro-sale" class="dropdown-item" data-tab-trigger="tab-prozorro-sale">
-              <i class="fas fa-hand-holding-dollar"></i> Prozorro.Sale
+            <a href="#seized-property" class="dropdown-item">
+              <div class="dropdown-item-icon"><i class="fas fa-gavel"></i></div>
+              <div class="dropdown-item-text">
+                <span class="dropdown-item-title">Арештоване майно / активи</span>
+                <span class="dropdown-item-sub">Торги СЕТАМ та Prozorro з дисконтом до 50%</span>
+              </div>
             </a>
-            <a href="#law-practice" class="dropdown-item" data-tab-trigger="tab-law-practice">
-              <i class="fas fa-scale-balanced"></i> Загальна юридична практика
+            <a href="#certification" class="dropdown-item" data-tab-trigger="tab-cert-products">
+              <div class="dropdown-item-icon"><i class="fas fa-certificate"></i></div>
+              <div class="dropdown-item-text">
+                <span class="dropdown-item-title">– Сертифікація продукції</span>
+                <span class="dropdown-item-sub">Сертифікати відповідності, лабораторні випробування</span>
+              </div>
+            </a>
+            <a href="#certification" class="dropdown-item" data-tab-trigger="tab-cert-iso">
+              <div class="dropdown-item-icon"><i class="fas fa-award"></i></div>
+              <div class="dropdown-item-text">
+                <span class="dropdown-item-title">– Сертифікація ISO</span>
+                <span class="dropdown-item-sub">ISO 9001, 14001, 22000, 45001</span>
+              </div>
+            </a>
+            <a href="#law-practice" class="dropdown-item">
+              <div class="dropdown-item-icon"><i class="fas fa-scale-balanced"></i></div>
+              <div class="dropdown-item-text">
+                <span class="dropdown-item-title">Юридичний супровід</span>
+                <span class="dropdown-item-sub">Господарське, цивільне право, захист у судах</span>
+              </div>
             </a>
           </div>
         </div>
+
         <a href="#about" class="nav-link">Про нас</a>
         <a href="#advantages" class="nav-link">Переваги</a>
         <a href="#resources" class="nav-link">Ресурси</a>
         <a href="#blog" class="nav-link">Блог</a>
         <a href="#news" class="nav-link">Новини</a>
         <a href="#contacts" class="nav-link">Контакти</a>
+
+        <!-- Додатковий блок для мобільного меню -->
+        <div class="mobile-nav-footer">
+          <button class="btn btn-primary btn-sm open-consult-modal" data-service="Швидка консультація з мобільного меню" style="width: 100%; margin-bottom: 14px;">
+            <i class="fas fa-check-circle"></i> Замовити консультацію
+          </button>
+          <div class="mobile-nav-contacts">
+            <a href="tel:0672031717" class="mobile-nav-phone"><i class="fas fa-phone-alt"></i> 067 203 17 17</a>
+            <div class="mobile-nav-messengers">
+              <a href="https://wa.me/380672031717" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              <a href="https://t.me/+380672031717" target="_blank" rel="noopener noreferrer" title="Telegram"><i class="fab fa-telegram"></i></a>
+              <a href="viber://chat?number=%2B380672031717" title="Viber"><i class="fab fa-viber"></i></a>
+            </div>
+          </div>
+        </div>
       </nav>
 
       <!-- Швидкий зв'язок та CTA -->
@@ -107,15 +154,21 @@
         УКРТЕНДЕРКОНСАЛТ
         <span>Тендери. Право. Результат.</span>
       </h1>
-      <p class="hero-description">
-        Комплексний юридичний та консалтинговий супровід публічних закупівель, Prozorro та Prozorro.Sale для учасників і замовників. Захист інтересів бізнесу від кваліфікації до договору та оскарження в АМКУ.
-      </p>
+      
+      <div class="hero-description-block">
+        <p class="hero-lead"><i class="fas fa-scale-balanced" style="color: #9fe267;"></i> Комплексний юридичний та консалтинговий супровід:</p>
+        <ul class="hero-bullets">
+          <li><strong>публічних закупівель товарів, робіт і послуг (Prozorro)</strong> для учасників і замовників закупівель. Скарги до органів ДАСУ;</li>
+          <li><strong>публічних продажів державного та комунального майна (Prozorro.Sale)</strong> для організаторів та покупців таких продажів та здачі в оренду;</li>
+          <li><strong>юридичні консультації, допомога, підготовка юридичних документів</strong>, захист інтересів в судах юридичних та фізичних осіб.</li>
+        </ul>
+      </div>
       
       <div class="hero-buttons">
         <button class="btn btn-primary open-consult-modal" data-service="Безкоштовна первинна консультація" id="heroConsultBtn">
           <i class="fas fa-paper-plane"></i> Отримати консультацію
         </button>
-        <a href="#services" class="btn btn-outline-light" id="heroServicesBtn">
+        <a href="#prozorro" class="btn btn-outline-light" id="heroServicesBtn">
           <i class="fas fa-list-check"></i> Переглянути послуги
         </a>
       </div>
@@ -135,11 +188,11 @@
             <span>Захист від дискримінацій</span>
           </div>
         </div>
-        <div class="hero-stat-item">
+        <div class="hero-stat-item" title="100% відповідність законодавству про публічні закупівлі та про публічні продажі та здачі в оренду державного та комунального майна, а також реалізації інших активів">
           <div class="hero-stat-icon"><i class="fas fa-certificate"></i></div>
           <div class="hero-stat-text">
             <strong>100% відповідність</strong>
-            <span>Закону про закупівлі</span>
+            <span>законодавству про закупівлі, продажі та оренду майна</span>
           </div>
         </div>
         <div class="hero-stat-item">
@@ -160,28 +213,31 @@
     <div class="container">
       <div class="quick-nav-grid">
         
-        <a href="#participants" class="quick-card">
-          <div class="quick-card-icon"><i class="fas fa-user-check"></i></div>
-          <h3>Для Учасників торгів</h3>
-          <p>Тендер під ключ, відкриті торги, Prozorro Market, аналіз конкурентів та оскарження.</p>
-        </a>
-
-        <a href="#customers" class="quick-card">
-          <div class="quick-card-icon"><i class="fas fa-landmark"></i></div>
-          <h3>Для Замовників торгів</h3>
-          <p>Планування, тендерна документація, аудит, супровід УО та захист від контролюючих органів.</p>
+        <a href="#prozorro" class="quick-card">
+          <div class="quick-card-icon"><i class="fas fa-file-contract"></i></div>
+          <h3>ПРОЗОРРО (Закупівлі)</h3>
+          <p>Тендер під ключ, відкриті торги, Prozorro Market, розробка ТД, аудит, скарги до органів ДАСУ.</p>
         </a>
 
         <a href="#prozorro-sale" class="quick-card">
-          <div class="quick-card-icon"><i class="fas fa-chart-line"></i></div>
-          <h3>Prozorro.Продажі</h3>
-          <p>Електронні аукціони малої приватизації, оренда, банкрутство, активи та складні лоти.</p>
+          <div class="quick-card-icon"><i class="fas fa-hand-holding-dollar"></i></div>
+          <h3>Prozorro.Sale (Аукціони)</h3>
+          <p>Для організаторів та покупців прозоро продажів і здачі в оренду майна, складні активи.</p>
+        </a>
+
+        <a href="#certification" class="quick-card">
+          <div class="quick-card-icon"><i class="fas fa-award"></i></div>
+          <div class="quick-card-dual-title">
+            <span>– Сертифікація продукції</span>
+            <span>– Сертифікація ISO</span>
+          </div>
+          <p>Сертифікація продукції від 10 000 грн, випробування у лабораторії та системи ISO від 15 000 грн.</p>
         </a>
 
         <a href="#law-practice" class="quick-card">
           <div class="quick-card-icon"><i class="fas fa-scale-balanced"></i></div>
-          <h3>Юридична практика</h3>
-          <p>Господарське, цивільне, сімейне та корпоративне право. Договірна та судова робота.</p>
+          <h3>Юридичний супровід</h3>
+          <p>Юридичні консультації, договори, претензії, судова практика та захист інтересів у судах.</p>
         </a>
 
       </div>
@@ -189,42 +245,52 @@
   </section>
 
   <!-- ==========================================================================
-       Секція 1: Комплексні послуги та тарифи (Interactive Tabs)
+       РОЗДІЛ 1: ПРОЗОРРО (Публічні закупівлі)
        ========================================================================== -->
-  <section class="section section-bg-sage" id="services">
+  <section class="section section-bg-sage" id="prozorro">
     <div class="container">
       
-      <div class="badge-tag" style="display: table; margin: 0 auto 12px;">Повний каталог послуг</div>
-      <h2 class="section-title">Юридичний та консалтинговий супровід</h2>
+      <div class="badge-tag" style="display: table; margin: 0 auto 12px;">Публічні закупівлі</div>
+      <h2 class="section-title">ПРОЗОРРО</h2>
       <p class="section-subtitle">
-        Оберіть ваш напрямок: професійний захист інтересів бізнесу та організаторів на кожному етапі закупівельного та юридичного процесу.
+        Публічні закупівлі товарів, робіт і послуг (Prozorro) для учасників і замовників закупівель. Скарги до органів ДАСУ.
       </p>
 
-      <!-- Навігація по вкладках -->
+      <!-- Навігація по вкладках Prozorro -->
       <div class="services-nav-tabs">
-        <button class="tab-btn active" data-tab="tab-participants">
+        <button class="tab-btn active" data-tab="tab-prozorro-participants">
           <i class="fas fa-users-gear"></i> Для Учасників торгів
         </button>
-        <button class="tab-btn" data-tab="tab-customers">
+        <button class="tab-btn" data-tab="tab-prozorro-customers">
           <i class="fas fa-building-columns"></i> Для Замовників торгів
-        </button>
-        <button class="tab-btn" data-tab="tab-prozorro-sale">
-          <i class="fas fa-hand-holding-dollar"></i> Prozorro.Sale
-        </button>
-        <button class="tab-btn" data-tab="tab-law-practice">
-          <i class="fas fa-briefcase"></i> Загальна юридична практика
         </button>
       </div>
 
       <!-- Вкладка 1: ДЛЯ УЧАСНИКІВ ТОРГІВ -->
-      <div class="tab-content-panel active" id="tab-participants">
-        <div style="background: #ffffff; padding: 24px; border-radius: var(--radius-md); margin-bottom: 30px; border-left: 4px solid var(--color-primary); box-shadow: var(--shadow-sm);">
-          <h3 style="color: var(--color-forest); font-size: 1.3rem; margin-bottom: 8px;">
-            Публічні закупівлі — супровід «під ключ» для учасників торгів
-          </h3>
-          <p style="color: var(--color-text-muted); font-size: 0.95rem;">
-            Швидкі напрямки: <strong>Тендер під ключ • Відкриті торги • Спрощені закупівлі • Торги з обмеженою участю • Конкурентний діалог • Prozorro Market • Перевірка конкурентів • Оскарження до АМКУ</strong>
-          </p>
+      <div class="tab-content-panel active" id="tab-prozorro-participants">
+        <div class="section-showcase-card">
+          <div class="showcase-content">
+            <div class="badge-tag light" style="background: rgba(46,78,42,0.1); color: var(--color-forest); display: inline-table; margin-bottom: 8px;">Prozorro для учасників</div>
+            <h3>Публічні закупівлі — супровід «під ключ» для учасників торгів</h3>
+            <p>
+              Забезпечуємо повноцінний захист інтересів постачальників: від детального аудиту тендерної документації та виявлення прихованих дискримінаційних умов до підготовки бездоганної цінової пропозиції, захисту перемоги та оскарження.
+            </p>
+            <div class="showcase-tags">
+              <span class="showcase-tag"><i class="fas fa-check"></i> Тендер під ключ</span>
+              <span class="showcase-tag"><i class="fas fa-check"></i> Відкриті торги</span>
+              <span class="showcase-tag"><i class="fas fa-check"></i> Спрощені закупівлі</span>
+              <span class="showcase-tag"><i class="fas fa-check"></i> Prozorro Market</span>
+              <span class="showcase-tag"><i class="fas fa-check"></i> Оскарження до АМКУ</span>
+              <span class="showcase-tag"><i class="fas fa-check"></i> Скарги до органів ДАСУ</span>
+            </div>
+          </div>
+          <div class="showcase-image-wrap">
+            <img src="assets/images/consulting-meeting.png" alt="Аналітика та стратегія тендерів Prozorro" loading="lazy">
+            <div class="showcase-badge-pill">
+              <i class="fas fa-chart-line"></i>
+              <span>Експертний аналіз та супровід</span>
+            </div>
+          </div>
         </div>
 
         <div class="service-cards-grid">
@@ -249,11 +315,6 @@
               <li>Підготовка документів переможця та їх завантаження до системи;</li>
               <li>Супровід на етапі укладення договору про закупівлю.</li>
             </ul>
-            <div class="service-extra-box">
-              <h5>Додаткові послуги:</h5>
-              <p><strong>• Перевірка конкурентів — 1 000 грн:</strong> Аналіз пропозицій інших учасників на предмет відповідності ТД та підстав для відхилення.</p>
-              <p><strong>• Підготовка та подання скарги до АМКУ — 3 000 грн:</strong> Захист прав та інтересів учасника в Органі оскарження.</p>
-            </div>
             <div class="service-card-footer">
               <button class="btn btn-primary btn-sm open-consult-modal" data-service="Відкриті торги з особливостями" style="width: 100%;">
                 Замовити супровід
@@ -264,29 +325,21 @@
           <!-- 2. Спрощені закупівлі -->
           <div class="service-card">
             <div class="service-card-header">
-              <span class="service-badge">Оптимальний старт</span>
+              <span class="service-badge">Швидкий старт</span>
               <h3 class="service-card-title">2. Спрощені закупівлі</h3>
               <div class="service-card-price">
-                від 2 000 до 3 000 грн <span>/ за одну закупівлю</span>
+                від 2 000 до 3 500 грн <span>/ за одну процедуру</span>
               </div>
             </div>
             <ul class="service-features-list">
-              <li>Аналіз оголошення про проведення закупівлі;</li>
-              <li>Аналіз вимог та інструкції для учасників;</li>
-              <li>Визначення переліку необхідних документів;</li>
-              <li>Підготовка пакету документів учасника;</li>
-              <li>Ретельна перевірка документів перед поданням;</li>
-              <li>Завантаження пропозиції на електронний майданчик;</li>
+              <li>Аналіз оголошення про проведення спрощеної закупівлі;</li>
+              <li>Перевірка вимог до учасника та предмета закупівлі;</li>
+              <li>Підготовка повного пакета документів пропозиції;</li>
+              <li>Завантаження документів до електронної системи;</li>
               <li>Супровід участі в електронному аукціоні;</li>
-              <li>Консультування щодо цінової пропозиції;</li>
-              <li>Підготовка документів переможця;</li>
-              <li>Завантаження документів переможця;</li>
-              <li>Супровід укладення договору про закупівлю.</li>
+              <li>Підготовка документів переможця процедури;</li>
+              <li>Правова допомога на стадії підписання договору.</li>
             </ul>
-            <div class="service-extra-box">
-              <h5>Додаткова послуга:</h5>
-              <p><strong>• Перевірка пропозицій інших учасників — 500 грн:</strong> Аналіз документів опонентів на відповідність вимогам Замовника та виявлення невідповідностей.</p>
-            </div>
             <div class="service-card-footer">
               <button class="btn btn-primary btn-sm open-consult-modal" data-service="Спрощені закупівлі" style="width: 100%;">
                 Замовити супровід
@@ -297,34 +350,19 @@
           <!-- 3. Конкурентний діалог -->
           <div class="service-card">
             <div class="service-card-header">
-              <span class="service-badge">Складні закупівлі</span>
+              <span class="service-badge">Складні проєкти</span>
               <h3 class="service-card-title">3. Конкурентний діалог</h3>
               <div class="service-card-price">
-                від 5 000 до 10 000 грн <span>/ залежно від складності</span>
+                від 5 000 грн <span>/ за домовленістю</span>
               </div>
             </div>
-            <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-bottom: 14px;">
-              Комплексний юридичний супровід участі у процедурі конкурентного діалогу — від аналізу вимог Замовника до укладення договору.
-            </p>
             <ul class="service-features-list">
-              <li>Аналіз документації та вимог Замовника;</li>
-              <li>Аналіз кваліфікаційних вимог до учасників;</li>
-              <li>Перевірка документації на наявність дискримінаційних вимог;</li>
-              <li>Визначення переліку документів, необхідних для участі;</li>
-              <li>Підготовка кваліфікаційної пропозиції учасника;</li>
-              <li>Підготовка та завантаження документів через електронний майданчик;</li>
-              <li>Супровід учасника на відповідному етапі процедури;</li>
-              <li>Підготовка та подання цінової пропозиції;</li>
-              <li>Завантаження цінової пропозиції до системи Prozorro;</li>
-              <li>Супровід участі в електронному аукціоні;</li>
-              <li>Підготовка та завантаження документів переможця;</li>
-              <li>Супровід на етапі укладення договору.</li>
+              <li>Аналіз умов першого етапу та підготовка пропозиції щодо переговорів;</li>
+              <li>Юридичний супровід участі у переговорах (діалозі) із Замовником;</li>
+              <li>Розробка технічних та договірних пропозицій;</li>
+              <li>Підготовка остаточної тендерної пропозиції для другого етапу;</li>
+              <li>Захист прав учасника на всіх етапах процедури.</li>
             </ul>
-            <div class="service-extra-box">
-              <h5>Додаткові послуги:</h5>
-              <p><strong>• Перевірка пропозицій конкурентів — 1 000 грн;</strong></p>
-              <p><strong>• Підготовка та подання скарги до АМКУ — 3 000 грн.</strong></p>
-            </div>
             <div class="service-card-footer">
               <button class="btn btn-primary btn-sm open-consult-modal" data-service="Конкурентний діалог" style="width: 100%;">
                 Замовити супровід
@@ -335,30 +373,68 @@
           <!-- 4. Prozorro Market -->
           <div class="service-card">
             <div class="service-card-header">
-              <span class="service-badge">Електронний каталог</span>
-              <h3 class="service-card-title">4. Участь у Prozorro Market</h3>
+              <span class="service-badge">Е-Каталог</span>
+              <h3 class="service-card-title">4. Prozorro Market</h3>
               <div class="service-card-price">
-                2 000,00 грн <span>/ за одну закупівлю (запит ціни)</span>
+                від 1 500 до 2 500 грн <span>/ за процедуру</span>
               </div>
             </div>
             <ul class="service-features-list">
-              <li>Аналіз умов та вимог закупівлі в каталозі Prozorro Market;</li>
-              <li>Перевірка відповідності товару/продукції вимогам Замовника;</li>
-              <li>Аналіз вимог до учасника та переліку документів;</li>
-              <li>Підготовка необхідних документів та інформації для участі;</li>
-              <li>Подання пропозиції через електронний майданчик;</li>
-              <li>Супровід участі у закупівлі;</li>
-              <li>Моніторинг перебігу процедури закупівлі;</li>
-              <li>Підготовка та завантаження документів переможця;</li>
-              <li>Супровід на етапі укладення договору про закупівлю.</li>
+              <li>Консультації щодо кваліфікації постачальника до каталогу Prozorro Market;</li>
+              <li>Підготовка документів для проходження кваліфікації до каталогу;</li>
+              <li>Аналіз запиту ціни пропозицій від замовника;</li>
+              <li>Підготовка та подання цінової пропозиції у запиті;</li>
+              <li>Супровід укладення договору за результатами закупівлі через е-каталог.</li>
             </ul>
-            <div class="service-extra-box">
-              <h5>Перевага електронного каталогу:</h5>
-              <p>Швидкі контракти без тривалих процедур. Забезпечуємо максимальну точність специфікації для гарантованої перемоги.</p>
-            </div>
             <div class="service-card-footer">
               <button class="btn btn-primary btn-sm open-consult-modal" data-service="Prozorro Market" style="width: 100%;">
                 Замовити супровід
+              </button>
+            </div>
+          </div>
+
+          <!-- 5. Перевірка конкурентів -->
+          <div class="service-card">
+            <div class="service-card-header">
+              <span class="service-badge">Аудит суперників</span>
+              <h3 class="service-card-title">5. Перевірка конкурентів</h3>
+              <div class="service-card-price">
+                від 1 000 грн <span>/ за одну пропозицію</span>
+              </div>
+            </div>
+            <ul class="service-features-list">
+              <li>Детальний правовий аналіз тендерної пропозиції переможця або конкурентів;</li>
+              <li>Виявлення невідповідностей умовам тендерної документації та закону;</li>
+              <li>Підготовка вимоги Замовнику про відхилення неправомірної пропозиції;</li>
+              <li>Підготовка матеріалів для скарги до АМКУ у разі бездіяльності Замовника.</li>
+            </ul>
+            <div class="service-card-footer">
+              <button class="btn btn-primary btn-sm open-consult-modal" data-service="Перевірка конкурентів" style="width: 100%;">
+                Замовити аудит
+              </button>
+            </div>
+          </div>
+
+          <!-- 6. Оскарження до АМКУ -->
+          <div class="service-card" style="border: 2px solid var(--color-primary);">
+            <div class="service-card-header">
+              <span class="service-badge" style="background: var(--color-forest); color: #ffffff;">Гарантія захисту</span>
+              <h3 class="service-card-title">6. Оскарження до АМКУ</h3>
+              <div class="service-card-price">
+                від 5 000 грн <span>/ за скаргу</span>
+              </div>
+            </div>
+            <ul class="service-features-list">
+              <li>Правовий аналіз підстав для оскарження дискримінаційних умов ТД;</li>
+              <li>Оскарження неправомірного відхилення вашої пропозиції;</li>
+              <li>Оскарження неправомірного визначення переможця-конкурента;</li>
+              <li>Підготовка аргументованої скарги до Постійно діючої колегії АМКУ;</li>
+              <li>Формування доказової бази та аналіз актуальної практики АМКУ;</li>
+              <li>Представництво інтересів під час розгляду скарги в АМКУ за погодженням.</li>
+            </ul>
+            <div class="service-card-footer">
+              <button class="btn btn-primary btn-sm open-consult-modal" data-service="Оскарження до АМКУ" style="width: 100%;">
+                Замовити оскарження
               </button>
             </div>
           </div>
@@ -367,34 +443,17 @@
       </div>
 
       <!-- Вкладка 2: ДЛЯ ЗАМОВНИКІВ ТОРГІВ -->
-      <div class="tab-content-panel" id="tab-customers">
-        <div style="background: #ffffff; padding: 28px; border-radius: var(--radius-md); margin-bottom: 30px; border-left: 4px solid var(--color-forest); box-shadow: var(--shadow-sm);" id="customers">
-          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
-            <div>
-              <h3 style="color: var(--color-forest); font-size: 1.35rem; margin-bottom: 6px;">
-                Консалтинг для Замовників публічних закупівель
-              </h3>
-              <p style="color: var(--color-text-muted); font-size: 0.95rem; max-width: 800px;">
-                Комплексний юридичний та організаційний супровід Замовників на всіх етапах — від планування та підготовки документації до укладення договору, контролю його виконання та захисту від ДАСУ.
-              </p>
-            </div>
-            <div style="text-align: right;">
-              <div style="font-size: 1.25rem; font-weight: 800; color: var(--color-primary);">3 000,00 грн</div>
-              <div style="font-size: 0.82rem; color: var(--color-text-muted);">процедура під ключ</div>
-            </div>
-          </div>
-
-          <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
-            <div style="background: var(--color-bg-sage-soft); padding: 10px 18px; border-radius: var(--radius-sm);">
-              <strong>🔥 Абонентський супровід Замовника:</strong> 10 процедур на місяць — <strong>30 000,00 грн / міс.</strong>
-            </div>
-            <button class="btn btn-forest btn-sm open-consult-modal" data-service="Абонентський супровід замовника">
-              Оформити абонемент
-            </button>
-          </div>
+      <div class="tab-content-panel" id="tab-prozorro-customers">
+        <div style="background: #ffffff; padding: 24px; border-radius: var(--radius-md); margin-bottom: 30px; border-left: 4px solid var(--color-primary); box-shadow: var(--shadow-sm);" id="customers">
+          <h3 style="color: var(--color-forest); font-size: 1.3rem; margin-bottom: 8px;">
+            Супровід процедур закупівель для Замовників — від планування до аудиту
+          </h3>
+          <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 0;">
+            Поетапний супровід Замовників торгів, комунальних та державних підприємств, Уповноважених осіб (УО) відповідно до Закону України «Про публічні закупівлі» та чинних Особливостей.
+          </p>
         </div>
 
-        <div class="client-steps-grid">
+        <div class="steps-grid">
           
           <!-- 01 -->
           <div class="step-card">
@@ -402,16 +461,13 @@
               <span class="step-number">01</span>
               <span class="step-price">500 грн</span>
             </div>
-            <h4 class="step-title">Планування закупівель</h4>
+            <h4 class="step-title">Розробка проєкту договору про закупівлю</h4>
             <ul class="step-list">
-              <li>Аналіз потреби Замовника у закупівлі;</li>
-              <li>Консультації щодо вибору виду та способу закупівлі;</li>
-              <li>Визначення предмета закупівлі та очікуваної вартості;</li>
-              <li>Аналіз ринку та комерційних пропозицій;</li>
-              <li>Підготовка та супровід річного плану закупівель;</li>
-              <li>Внесення змін до річного плану;</li>
-              <li>Консультації щодо визначення кодів ДК 021:2015;</li>
-              <li>Аналіз ризиків та поділ предмета на лоти.</li>
+              <li>Розробка індивідуального проєкту договору під конкретний предмет закупівлі;</li>
+              <li>Включення істотних умов відповідно до Закону та Цивільного кодексу;</li>
+              <li>Визначення порядку зміни умов договору (ціни, строків, обсягів);</li>
+              <li>Встановлення дієвої відповідальності сторін (штрафи, пеня);</li>
+              <li>Аналіз ризиків невиконання договору постачальником.</li>
             </ul>
           </div>
 
@@ -419,18 +475,15 @@
           <div class="step-card">
             <div class="step-card-header">
               <span class="step-number">02</span>
-              <span class="step-price">1 000 грн</span>
+              <span class="step-price">1 000 грн. - 2 000 грн.</span>
             </div>
-            <h4 class="step-title">Підготовка тендерної документації</h4>
+            <h4 class="step-title">Розробка тендерної документації</h4>
             <ul class="step-list">
-              <li>Розроблення проєкту тендерної документації;</li>
-              <li>Підготовка проєкту договору про закупівлю;</li>
-              <li>Формування кваліфікаційних критеріїв;</li>
-              <li>Визначення вимог до учасників та предмета;</li>
-              <li>Підготовка технічної специфікації;</li>
-              <li>Перевірка на відповідність нормам законодавства;</li>
-              <li>Аналіз на предмет дискримінаційних положень;</li>
-              <li>Формування переліку необхідних документів.</li>
+              <li>Підготовка повної тендерної документації відповідно до законодавства;</li>
+              <li>Формування недискримінаційних кваліфікаційних критеріїв;</li>
+              <li>Аналіз технічної специфікації предмета закупівлі;</li>
+              <li>Підготовка вимог щодо відповідності критеріям ст. 17 Закону;</li>
+              <li>Підготовка протоколу уповноваженої особи про затвердження ТД.</li>
             </ul>
           </div>
 
@@ -438,17 +491,15 @@
           <div class="step-card">
             <div class="step-card-header">
               <span class="step-number">03</span>
-              <span class="step-price">500 грн</span>
+              <span class="step-price">1 000 грн</span>
             </div>
-            <h4 class="step-title">Проведення процедури закупівлі</h4>
+            <h4 class="step-title">Супровід проведення процедури закупівлі</h4>
             <ul class="step-list">
-              <li>Юридичний супровід проведення закупівлі;</li>
-              <li>Постійні консультації уповноваженої особи;</li>
-              <li>Аналіз запитань та вимог учасників;</li>
-              <li>Підготовка відповідей та роз'яснень до ТД;</li>
-              <li>Підготовка змін до тендерної документації;</li>
-              <li>Супровід продовження строків подання пропозицій;</li>
-              <li>Підготовка протоколів та рішень уповноваженої особи.</li>
+              <li>Підготовка оголошення про проведення процедури закупівлі;</li>
+              <li>Оприлюднення тендерної документації в електронній системі;</li>
+              <li>Підготовка відповідей на звернення та запити учасників;</li>
+              <li>Внесення змін до тендерної документації (за потреби);</li>
+              <li>Підготовка протоколів щодо продовження строку або внесення змін.</li>
             </ul>
           </div>
 
@@ -456,34 +507,31 @@
           <div class="step-card">
             <div class="step-card-header">
               <span class="step-number">04</span>
-              <span class="step-price">1 000 грн</span>
+              <span class="step-price">1 000 грн. - 2 000 грн.</span>
             </div>
-            <h4 class="step-title">Оцінка та розгляд тендерних пропозицій</h4>
+            <h4 class="step-title">Аналіз і оцінка тендерних пропозицій</h4>
             <ul class="step-list">
-              <li>Правовий аналіз тендерних пропозицій;</li>
-              <li>Перевірка відповідності вимогам ТД;</li>
-              <li>Аналіз підстав для відхилення пропозицій;</li>
-              <li>Аналіз можливості усунення невідповідностей (24 год);</li>
-              <li>Підготовка повідомлень про усунення невідповідностей;</li>
-              <li>Підготовка рішень про визначення переможця;</li>
-              <li>Підготовка протоколів розгляду та перевірка документів.</li>
+              <li>Правовий аналіз тендерних пропозицій учасників торгів;</li>
+              <li>Перевірка відповідності кваліфікаційним та технічним вимогам;</li>
+              <li>Підготовка повідомлення з вимогою про усунення невідповідностей (24 години);</li>
+              <li>Підготовка протоколу про відхилення тендерної пропозиції;</li>
+              <li>Підготовка протоколу про визначення переможця закупівлі.</li>
             </ul>
           </div>
 
           <!-- 05 -->
-          <div class="step-card">
+          <div class="step-card" style="border: 2px solid var(--color-primary);">
             <div class="step-card-header">
               <span class="step-number">05</span>
-              <span class="step-price">від 2 000 до 4 000 грн</span>
+              <span class="step-price" style="color: var(--color-forest); font-weight: 800;">безкоштовно</span>
             </div>
-            <h4 class="step-title">Оскарження та захист інтересів</h4>
+            <h4 class="step-title">Супровід укладення договору про закупівлю</h4>
             <ul class="step-list">
-              <li>Аналіз вимог та скарг учасників до АМКУ;</li>
-              <li>Підготовка мотивованих заперечень на скарги;</li>
-              <li>Підготовка детальних пояснень Замовника;</li>
-              <li>Представництво та супровід під час розгляду скарги;</li>
-              <li>Формування бездоганної правової позиції;</li>
-              <li>Консультації щодо виконання рішень органу оскарження.</li>
+              <li>Перевірка документів переможця перед укладенням договору;</li>
+              <li>Контроль строків укладення договору про закупівлю;</li>
+              <li>Підготовка повідомлення про намір укласти договір;</li>
+              <li>Правовий супровід підписання договору з переможцем;</li>
+              <li>Оприлюднення повідомлення про укладений договір у Prozorro.</li>
             </ul>
           </div>
 
@@ -491,43 +539,9 @@
           <div class="step-card">
             <div class="step-card-header">
               <span class="step-number">06</span>
-              <span class="step-price">500 грн</span>
-            </div>
-            <h4 class="step-title">Укладення договору про закупівлю</h4>
-            <ul class="step-list">
-              <li>Підготовка проєкту договору та правова експертиза;</li>
-              <li>Перевірка істотних умов договору;</li>
-              <li>Підготовка додаткових угод та змін;</li>
-              <li>Юридичний супровід зміни істотних умов;</li>
-              <li>Консультації щодо продовження строків та зміни цін;</li>
-              <li>Супровід розірвання договору та аналіз ризиків.</li>
-            </ul>
-          </div>
-
-          <!-- 07 -->
-          <div class="step-card">
-            <div class="step-card-header">
-              <span class="step-number">07</span>
-              <span class="step-price">від 5 000 грн</span>
-            </div>
-            <h4 class="step-title">Контроль виконання договору</h4>
-            <ul class="step-list">
-              <li>Юридичний супровід виконання договорів;</li>
-              <li>Контроль дотримання умов та аналіз порушень постачальника;</li>
-              <li>Підготовка претензій до постачальника;</li>
-              <li>Вимоги щодо сплати штрафів, пені та неустойки;</li>
-              <li>Підготовка документів щодо розірвання договору;</li>
-              <li>Підготовка матеріалів для судового захисту.</li>
-            </ul>
-          </div>
-
-          <!-- 08 -->
-          <div class="step-card">
-            <div class="step-card-header">
-              <span class="step-number">08</span>
               <span class="step-price">від 2 000 до 3 000 грн</span>
             </div>
-            <h4 class="step-title">Захист від контролюючих органів</h4>
+            <h4 class="step-title">Захист від контролюючих органів (ДАСУ)</h4>
             <ul class="step-list">
               <li>Консультації щодо моніторингу закупівлі ДАСУ;</li>
               <li>Аналіз запитів органів контролю та підготовка відповідей;</li>
@@ -537,10 +551,10 @@
             </ul>
           </div>
 
-          <!-- 09 -->
+          <!-- 07 -->
           <div class="step-card">
             <div class="step-card-header">
-              <span class="step-number">09</span>
+              <span class="step-number">07</span>
               <span class="step-price">5 000 грн</span>
             </div>
             <h4 class="step-title">Аудит закупівель</h4>
@@ -553,216 +567,845 @@
             </ul>
           </div>
 
-          <!-- 10 -->
-          <div class="step-card">
-            <div class="step-card-header">
-              <span class="step-number">10</span>
-              <span class="step-price">1 500 грн</span>
-            </div>
-            <h4 class="step-title">Супровід уповноваженої особи</h4>
-            <ul class="step-list">
-              <li>Постійні консультації уповноваженої особи (УО);</li>
-              <li>Роз'яснення законодавства у сфері закупівель;</li>
-              <li>Перевірка проєктів рішень та протоколів;</li>
-              <li>Правовий аналіз нестандартних ситуацій;</li>
-              <li>Підготовка письмових правових висновків.</li>
-            </ul>
-          </div>
-
         </div>
       </div>
 
-      <!-- Вкладка 3: ПРОЗОРО. ПРОДАЖІ (Prozorro.Sale) -->
-      <div class="tab-content-panel" id="tab-prozorro-sale">
-        <div style="background: #ffffff; padding: 28px; border-radius: var(--radius-md); margin-bottom: 30px; border-left: 4px solid var(--color-primary); box-shadow: var(--shadow-sm);" id="prozorro-sale">
-          <h3 style="color: var(--color-forest); font-size: 1.35rem; margin-bottom: 8px;">
-            ПРОЗОРО. ПРОДАЖІ — Електронні аукціони під ключ
-          </h3>
-          <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6;">
-            Супроводжуємо Замовників (організаторів) та Учасників (покупців/орендарів) на всіх етапах роботи з електронною торговою системою <strong>Prozorro.Sale</strong> — від підготовки лота або пошуку об'єкта до проведення аукціону, визначення переможця та підписання договору.
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       РОЗДІЛ 2: ПРОЗОРО.ПРОДАЖІ (Prozorro.Sale)
+       ========================================================================== -->
+  <section class="section" id="prozorro-sale">
+    <div class="container">
+      
+      <div class="badge-tag" style="display: table; margin: 0 auto 12px;">Електронні аукціони</div>
+      <h2 class="section-title">ПРОЗОРО.ПРОДАЖІ</h2>
+      <p class="section-subtitle">
+        Публічні продажі та здача в оренду державного та комунального майна, а також реалізація інших активів (Prozorro.Sale) для організаторів та покупців.
+      </p>
+
+      <div class="section-showcase-card">
+        <div class="showcase-content">
+          <div class="badge-tag light" style="background: rgba(46,78,42,0.1); color: var(--color-forest); display: inline-table; margin-bottom: 8px;">Prozorro.Sale аукціони</div>
+          <h3>Електронні аукціони Prozorro.Sale «під ключ»</h3>
+          <p>
+            Супроводжуємо організаторів та покупців (орендарів) на всіх етапах роботи з державною торговою системою <strong>Prozorro.Sale</strong> — від Due Diligence аудиту об'єкта до торгів, визначення переможця, укладення договору та нотаріального посвідчення.
           </p>
+          <div class="showcase-tags">
+            <span class="showcase-tag"><i class="fas fa-handshake"></i> Укладення вигідних угод</span>
+            <span class="showcase-tag"><i class="fas fa-shield-alt"></i> Захист гарантійних внесків</span>
+            <span class="showcase-tag"><i class="fas fa-gavel"></i> Мала приватизація та оренда</span>
+            <span class="showcase-tag"><i class="fas fa-file-signature"></i> Нотаріальний супровід</span>
+          </div>
+        </div>
+        <div class="showcase-image-wrap">
+          <img src="assets/images/deal-handshake.png" alt="Укладення вигідних угод Prozorro.Sale" loading="lazy">
+          <div class="showcase-badge-pill">
+            <i class="fas fa-award"></i>
+            <span>Безпека розрахунків та чистота угод</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 28px; margin-bottom: 40px;">
+        
+        <!-- Картка 1: Для організаторів -->
+        <div class="service-card">
+          <div class="service-card-header">
+            <span class="service-badge">Організаторам торгів та оренди</span>
+            <h3 class="service-card-title">Для організаторів прозоро продажів та здачі в оренду майна</h3>
+            <div class="service-card-price">від 3 000,00 грн <span>/ за процедуру</span></div>
+          </div>
+          <ul class="service-features-list">
+            <li><strong>01. Підготовка об'єкта:</strong> аналіз документів на актив, виявлення обтяжень, арештів та юридичних ризиків;</li>
+            <li><strong>02. Підготовка лота:</strong> юридичний опис лота, формування інформаційного повідомлення, проєкт договору;</li>
+            <li><strong>03. Умови аукціону:</strong> визначення стартової ціни, гарантійних внесків, кроку аукціону відповідно до порядку;</li>
+            <li><strong>04. Оголошення та супровід:</strong> розміщення лота через акредитовані майданчики, відповіді учасникам;</li>
+            <li><strong>05. Визначення переможця:</strong> перевірка пакетів документів, підготовка протоколу, експертиза договору;</li>
+            <li><strong>06. Захист інтересів:</strong> аналіз претензій, скарг, юридичний супровід процедури оскарження;</li>
+            <li><strong>07. Виконання договору:</strong> контроль розрахунків, передача майна за актом, претензійна робота.</li>
+          </ul>
+          <div class="service-card-footer">
+            <button class="btn btn-primary btn-sm open-consult-modal" data-service="Для організаторів прозоро продажів та здачі в оренду майна" style="width: 100%;">
+              Замовити супровід організатора
+            </button>
+          </div>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 28px; margin-bottom: 40px;">
-          
-          <!-- Організаторам -->
-          <div class="service-card">
-            <div class="service-card-header">
-              <span class="service-badge">Для Замовників / Організаторів</span>
-              <h3 class="service-card-title">Prozorro.Sale для Організаторів</h3>
-              <div class="service-card-price">від 3 000,00 грн <span>/ за процедуру</span></div>
-            </div>
-            <ul class="service-features-list">
-              <li><strong>01. Підготовка об'єкта:</strong> аналіз документів на актив, виявлення обтяжень та юридичних ризиків;</li>
-              <li><strong>02. Підготовка лота:</strong> опис лота, формування інформаційного повідомлення, проєкт договору;</li>
-              <li><strong>03. Умови аукціону:</strong> визначення стартової ціни, гарантійних внесків, кроку аукціону;</li>
-              <li><strong>04. Оголошення та супровід:</strong> розміщення лота, консультації щодо майданчика, відповіді учасникам;</li>
-              <li><strong>05. Визначення переможця:</strong> перевірка документів, підготовка протоколу, експертиза договору;</li>
-              <li><strong>06. Захист інтересів:</strong> аналіз претензій, скарг, супровід процедури оскарження;</li>
-              <li><strong>07. Виконання договору:</strong> контроль розрахунків, передача майна, претензійна робота.</li>
-            </ul>
-            <div class="service-card-footer">
-              <button class="btn btn-primary btn-sm open-consult-modal" data-service="Prozorro.Sale для Організаторів" style="width: 100%;">
-                Замовити супровід організатора
-              </button>
-            </div>
+        <!-- Картка 2: Для покупців -->
+        <div class="service-card">
+          <div class="service-card-header">
+            <span class="service-badge">Покупцям та орендарям</span>
+            <h3 class="service-card-title">Для покупців прозоро продажів та здачі в оренду майна</h3>
+            <div class="service-card-price">від 3 000,00 грн <span>/ за весь комплекс</span></div>
           </div>
-
-          <!-- Учасникам / Покупцям -->
-          <div class="service-card">
-            <div class="service-card-header">
-              <span class="service-badge">Для Покупців / Орендарів</span>
-              <h3 class="service-card-title">Prozorro.Sale для Учасників</h3>
-              <div class="service-card-price">від 3 000,00 грн <span>/ за весь комплекс</span></div>
-            </div>
-            <ul class="service-features-list">
-              <li><strong>01. Пошук та первинний аналіз лота:</strong> підбір ліквідних аукціонів, перевірка умов та статусу;</li>
-              <li><strong>02. Due Diligence (юридична перевірка):</strong> детальний аудит прав власності, арештів та судових спорів;</li>
-              <li><strong>03. Підготовка документів:</strong> заяви, довіреності, документи юросіб, ФОП та фізосіб;</li>
-              <li><strong>04. Супровід в торгах:</strong> тактика в 3-раундовому англійському або гібридному голландському аукціонах;</li>
-              <li><strong>05. Супровід переможця:</strong> перевірка протоколу, договір купівлі-продажу/оренди, реєстрація прав;</li>
-              <li><strong>06. Оскарження результатів:</strong> захист прав на придбання об'єкта, оскарження неправомірних дій.</li>
-            </ul>
-            <div class="service-card-footer">
-              <button class="btn btn-primary btn-sm open-consult-modal" data-service="Prozorro.Sale для Учасників" style="width: 100%;">
-                Замовити супровід покупця
-              </button>
-            </div>
+          <ul class="service-features-list">
+            <li><strong>01. Пошук та первинний аналіз лота:</strong> підбір ліквідних аукціонів, перевірка умов продажу чи оренди;</li>
+            <li><strong>02. Due Diligence (юридична перевірка):</strong> детальний аудит прав власності, арештів, іпотек та судових спорів;</li>
+            <li><strong>03. Підготовка документів:</strong> заяви, довіреності, установчі документи юросіб, ФОП та фізосіб;</li>
+            <li><strong>04. Супровід в торгах:</strong> вибір переможної тактики в 3-раундовому англійському або гібридному голландському аукціонах;</li>
+            <li><strong>05. Супровід переможця:</strong> перевірка протоколу, договір купівлі-продажу/оренди, реєстрація речових прав;</li>
+            <li><strong>06. Оскарження результатів:</strong> захист прав на придбання об'єкта, оскарження неправомірних дій організатора торгів.</li>
+          </ul>
+          <div class="service-card-footer">
+            <button class="btn btn-primary btn-sm open-consult-modal" data-service="Для покупців прозоро продажів та здачі в оренду майна" style="width: 100%;">
+              Замовити супровід покупця
+            </button>
           </div>
-
         </div>
 
-        <!-- Преміальний напрям: Складні активи -->
-        <div style="background: linear-gradient(135deg, var(--color-forest) 0%, var(--color-forest-dark) 100%); color: #ffffff; padding: 36px; border-radius: var(--radius-md); box-shadow: var(--shadow-lg);">
-          <div class="badge-tag light">Преміальний напрям</div>
-          <h3 style="font-size: 1.5rem; color: #ffffff; margin-bottom: 12px;">Супровід придбання складних активів</h3>
-          <p style="color: rgba(255, 255, 255, 0.9); margin-bottom: 22px; max-width: 850px;">
-            Глибокий Due Diligence та правова безпека при інвестуванні у високоризикові державні та банківські активи. Захищаємо інвестиції клієнтів від прихованих обтяжень та судових претензій.
+      </div>
+
+      <!-- Преміальний напрям: Складні активи -->
+      <div style="background: linear-gradient(135deg, var(--color-forest) 0%, var(--color-forest-dark) 100%); color: #ffffff; padding: 36px; border-radius: var(--radius-md); box-shadow: var(--shadow-lg);">
+        <div class="badge-tag light">Преміальний напрям</div>
+        <h3 style="font-size: 1.5rem; color: #ffffff; margin-bottom: 12px;">Супровід придбання складних активів</h3>
+        <p style="color: rgba(255, 255, 255, 0.9); margin-bottom: 22px; max-width: 850px;">
+          Глибокий Due Diligence та правова безпека при інвестуванні у високоризикові державні, комунальні та банківські активи. Захищаємо інвестиції клієнтів від прихованих обтяжень та судових претензій третіх осіб.
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; font-size: 0.92rem;">
+          <div><i class="fas fa-check-circle" style="color: #9fe267; margin-right: 8px;"></i> Придбання комерційної нерухомості</div>
+          <div><i class="fas fa-check-circle" style="color: #9fe267; margin-right: 8px;"></i> Придбання земельних ділянок</div>
+          <div><i class="fas fa-check-circle" style="color: #9fe267; margin-right: 8px;"></i> Корпоративні та майнові права</div>
+          <div><i class="fas fa-check-circle" style="color: #9fe267; margin-right: 8px;"></i> Придбання прав вимоги (борги)</div>
+          <div><i class="fas fa-check-circle" style="color: #9fe267; margin-right: 8px;"></i> Майно підприємств-банкрутів</div>
+          <div><i class="fas fa-check-circle" style="color: #9fe267; margin-right: 8px;"></i> Активи ліквідованих банків та ФГВФО</div>
+          <div><i class="fas fa-check-circle" style="color: #9fe267; margin-right: 8px;"></i> Оренда державного та комунального майна</div>
+          <div><i class="fas fa-check-circle" style="color: #9fe267; margin-right: 8px;"></i> Повний аудит активу перед аукціоном</div>
+        </div>
+        <div style="margin-top: 24px;">
+          <button class="btn btn-primary open-consult-modal" data-service="Супровід придбання складних активів">
+            Замовити юридичний аудит активу
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       РОЗДІЛ: АРЕШТОВАНЕ МАЙНО ТА АКТИВИ (СЕТАМ / Prozorro.Продажі)
+       ========================================================================== -->
+  <section class="section" id="seized-property">
+    <div class="container">
+      
+      <div class="badge-tag" style="display: table; margin: 0 auto 12px;">СЕТАМ та Prozorro.Продажі</div>
+      <h2 class="section-title">АРЕШТОВАНЕ МАЙНО / АКТИВИ</h2>
+      <p class="section-subtitle">
+        Юридичний супровід купівлі майна та активів на СЕТАМ та Prozorro.Продажі з дисконтом до 50%, без ризику втратити кошти.
+      </p>
+
+      <!-- Головний промо-банер розділу з ціною -->
+      <div class="seized-banner">
+        <div class="seized-banner-content">
+          <div class="badge-tag light" style="margin-bottom: 10px;">Купівля активів з дисконтом до 50%</div>
+          <h3>Юридичний супровід купівлі майна та активів на СЕТАМ та Prozorro.Продажі</h3>
+          <p>
+            Інвестуйте в заставне, арештоване та банківське майно безпечно. Ми забезпечуємо повний цикл юридичного захисту: від виявлення прихованих іпотек і заборон до отримання правовстановлюючих документів та ключів.
           </p>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; font-size: 0.92rem;">
-            <div><i class="fas fa-check-circle" style="color: #9fe267; margin-right: 8px;"></i> Придбання комерційної нерухомості</div>
-            <div><i class="fas fa-check-circle" style="color: #9fe267; margin-right: 8px;"></i> Придбання земельних ділянок</div>
-            <div><i class="fas fa-check-circle" style="color: #9fe267; margin-right: 8px;"></i> Корпоративні та майнові права</div>
-            <div><i class="fas fa-check-circle" style="color: #9fe267; margin-right: 8px;"></i> Придбання прав вимоги (борги)</div>
-            <div><i class="fas fa-check-circle" style="color: #9fe267; margin-right: 8px;"></i> Майно підприємств-банкрутів</div>
-            <div><i class="fas fa-check-circle" style="color: #9fe267; margin-right: 8px;"></i> Активи банків та фінустанов</div>
-            <div><i class="fas fa-check-circle" style="color: #9fe267; margin-right: 8px;"></i> Оренда державного та ком. майна</div>
-            <div><i class="fas fa-check-circle" style="color: #9fe267; margin-right: 8px;"></i> Повний аудит активу перед аукціоном</div>
-          </div>
-          <div style="margin-top: 24px;">
-            <button class="btn btn-primary open-consult-modal" data-service="Супровід складних активів">
-              Замовити юридичний аудит активу
+        </div>
+        <div class="seized-price-badge">
+          <span>Супровід «під ключ»</span>
+          <strong>від 5 000 грн</strong>
+          <small>за проведену процедуру купівлі майна (активу)</small>
+          <div style="margin-top: 14px;">
+            <button class="btn btn-primary btn-sm open-consult-modal" data-service="Купівля арештованого майна під ключ від 5 000 грн" style="width: 100%;">
+              <i class="fas fa-gavel"></i> Замовити супровід
             </button>
           </div>
         </div>
       </div>
 
-      <!-- Вкладка 4: ЗАГАЛЬНА ЮРИДИЧНА ПРАКТИКА -->
-      <div class="tab-content-panel" id="tab-law-practice">
-        <div style="background: #ffffff; padding: 24px; border-radius: var(--radius-md); margin-bottom: 30px; border-left: 4px solid var(--color-primary); box-shadow: var(--shadow-sm);" id="law-practice">
-          <h3 style="color: var(--color-forest); font-size: 1.3rem; margin-bottom: 6px;">
-            Загальна юридична практика та правовий супровід бізнесу і громадян
-          </h3>
-          <p style="color: var(--color-text-muted); font-size: 0.95rem;">
-            Надійний юридичний радник у сферах: <strong>Тендерне право • Господарське право • Цивільне право • Сімейне право • Корпоративне право</strong>
+      <!-- 🏛️ Перелік послуг (5 карток) -->
+      <div style="margin-bottom: 25px;">
+        <h3 class="section-title" style="font-size: 1.6rem; margin-bottom: 8px;">🏛️ ПЕРЕЛІК ПОСЛУГ</h3>
+        <p class="section-subtitle" style="margin-bottom: 28px;">Комплексний правовий захист на кожному етапі участі в торгах</p>
+      </div>
+
+      <div class="service-cards-grid">
+        
+        <!-- 1. Комплексний супровід «Під Ключ» -->
+        <div class="service-card" style="border-top: 4px solid var(--color-primary);">
+          <div class="service-card-header">
+            <span class="service-badge">Максимальний захист</span>
+            <h3 class="service-card-title">1. Комплексний супровід купівлі арештованого майна «Під Ключ»</h3>
+            <div class="service-card-price">від 5 000 грн <span>/ за процедуру</span></div>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 12px;">
+            Повний юридичний супровід інвестора / покупця від моменту вибору лота до отримання ключів та документів на право власності.
+          </p>
+          <div style="font-weight: 700; font-size: 0.88rem; color: var(--color-forest); margin-bottom: 6px;">Що входить:</div>
+          <ul class="service-features-list">
+            <li>Підбір ліквідного об'єкта та перевірка початкових даних;</li>
+            <li>Аудит юридичних ризиків та судової історії боржника;</li>
+            <li>Реєстрація на торгах та супровід сплати гарантійного внеску;</li>
+            <li>Зняття всіх видів обтяжень та арештів;</li>
+            <li>Реєстрація права власності у Державному реєстрі (ДРРП).</li>
+          </ul>
+          <div class="service-card-footer">
+            <button class="btn btn-primary btn-sm open-consult-modal" data-service="Комплексний супровід купівлі арештованого майна Під Ключ" style="width: 100%;">
+              Замовити під ключ
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. Юридичний аудит лота (Due Diligence) -->
+        <div class="service-card">
+          <div class="service-card-header">
+            <span class="service-badge">Безпека інвестицій</span>
+            <h3 class="service-card-title">2. Юридичний аудит лота (Due Diligence) перед торгами</h3>
+            <div class="service-card-price">від 3 000 грн <span>/ за лот</span></div>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 12px;">
+            Глибока перевірка історії майна для виявлення прихованих загроз до того, як ви внесете гарантійний внесок.
+          </p>
+          <div style="font-weight: 700; font-size: 0.88rem; color: var(--color-forest); margin-bottom: 6px;">Що входить:</div>
+          <ul class="service-features-list">
+            <li>Перевірка законності відкриття виконавчого провадження;</li>
+            <li>Перевірка наявності судових спорів та арештів щодо майна;</li>
+            <li>Перевірка прав третіх осіб (прописані неповнолітні діти, оренда);</li>
+            <li>Аудит оцінки вартості та дій державного/приватного виконавця;</li>
+            <li>Письмовий юридичний висновок: «Купувати» чи «Ігнорувати».</li>
+          </ul>
+          <div class="service-card-footer">
+            <button class="btn btn-primary btn-sm open-consult-modal" data-service="Юридичний аудит лота (Due Diligence)" style="width: 100%;">
+              Замовити аудит лота
+            </button>
+          </div>
+        </div>
+
+        <!-- 3. Зняття арештів та очищення майна -->
+        <div class="service-card">
+          <div class="service-card-header">
+            <span class="service-badge">Пост-аукціон</span>
+            <h3 class="service-card-title">3. Зняття арештів та очищення майна (Пост-аукціонний супровід)</h3>
+            <div class="service-card-price">від 3 500 грн <span>/ за процедуру</span></div>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 12px;">
+            Очищення придбаного майна від старих боргів та заборон попереднього власника.
+          </p>
+          <div style="font-weight: 700; font-size: 0.88rem; color: var(--color-forest); margin-bottom: 6px;">Що входить:</div>
+          <ul class="service-features-list">
+            <li>Скасування чинних арештів через виконавчу службу та приватних виконавців;</li>
+            <li>Зняття заборон податкових органів або скасування в судовому порядку;</li>
+            <li>Видалення майна з усього спектра обтяжень та іпотек у ДРРП;</li>
+            <li>Отримання чистого витягу про право власності у нотаріуса;</li>
+            <li>Повне припинення старих виконавчих проваджень щодо об'єкта.</li>
+          </ul>
+          <div class="service-card-footer">
+            <button class="btn btn-primary btn-sm open-consult-modal" data-service="Зняття арештів та очищення майна" style="width: 100%;">
+              Замовити очищення майна
+            </button>
+          </div>
+        </div>
+
+        <!-- 4. Примусове виселення та зняття з реєстрації -->
+        <div class="service-card">
+          <div class="service-card-header">
+            <span class="service-badge">Фактичне володіння</span>
+            <h3 class="service-card-title">4. Примусове виселення та зняття з реєстрації («виписка»)</h3>
+            <div class="service-card-price">від 4 000 грн <span>/ за послугу</span></div>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 12px;">
+            Фізичне та юридичне звільнення купленої нерухомості від попередніх власників або мешканців.
+          </p>
+          <div style="font-weight: 700; font-size: 0.88rem; color: var(--color-forest); margin-bottom: 6px;">Що входить:</div>
+          <ul class="service-features-list">
+            <li>Проведення переговорів про добровільне звільнення нерухомості;</li>
+            <li>Складання письмових претензій та вимог про звільнення житла;</li>
+            <li>Повний судовий процес щодо виселення та втрати права користування;</li>
+            <li>Зняття з реєстраційного обліку («виписка») через ЦНАП/суд;</li>
+            <li>Супровід виконавчого провадження та фактична передача ключів.</li>
+          </ul>
+          <div class="service-card-footer">
+            <button class="btn btn-primary btn-sm open-consult-modal" data-service="Примусове виселення та зняття з реєстрації" style="width: 100%;">
+              Замовити виселення
+            </button>
+          </div>
+        </div>
+
+        <!-- 5. Судовий захист результатів аукціону -->
+        <div class="service-card">
+          <div class="service-card-header">
+            <span class="service-badge">Судовий захист</span>
+            <h3 class="service-card-title">5. Судовий захист результатів аукціону</h3>
+            <div class="service-card-price">від 5 000 грн <span>/ за справу</span></div>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 12px;">
+            Захист ваших інтересів як добросовісного набувача у разі спроб колишнього власника (боржника) скасувати результати торгів.
+          </p>
+          <div style="font-weight: 700; font-size: 0.88rem; color: var(--color-forest); margin-bottom: 6px;">Що входить:</div>
+          <ul class="service-features-list">
+            <li>Представництво інтересів покупця у судах всіх інстанцій;</li>
+            <li>Підготовка відзивів, заперечень, клопотань та процесуальних документів;</li>
+            <li>Формування доказової бази добросовісності придбання лота;</li>
+            <li>Запобігання арештам майна на період судового розгляду;</li>
+            <li>Остаточне закріплення права власності за новим інвестором.</li>
+          </ul>
+          <div class="service-card-footer">
+            <button class="btn btn-primary btn-sm open-consult-modal" data-service="Судовий захист результатів аукціону" style="width: 100%;">
+              Замовити судовий захист
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Проблема та Ризики (Чому потрібен юрист?) -->
+      <div class="seized-risks-card">
+        <div class="seized-risks-header">
+          <div class="seized-risks-icon">
+            <i class="fas fa-triangle-exclamation"></i>
+          </div>
+          <div>
+            <h4>Проблема та Ризики (Чому потрібен юрист?)</h4>
+            <p style="margin-bottom: 0; color: var(--color-text-muted); font-size: 0.92rem;">
+              Купівля майна на торгах — це величезна вигода, але й значні підводні камені. Без професійного аналізу ви ризикуєте отримати:
+            </p>
+          </div>
+        </div>
+
+        <ul class="seized-risks-list">
+          <li><strong>Роками заморожені гроші</strong> через тривалі судові спори з боржником або банком;</li>
+          <li><strong>Прописаних неповнолітніх дітей чи сторонніх осіб</strong>, яких вкрай важко виписати без суду;</li>
+          <li><strong>Відмову нотаріуса реєструвати майно</strong> через наявність десятків іпотечних та податкових арештів.</li>
+        </ul>
+
+        <div class="seized-mission-box">
+          <i class="fas fa-bullseye" style="color: var(--color-primary); margin-right: 8px;"></i>
+          <strong>Наше завдання:</strong> Перетворити проблемний актив на вашу чисту та законну власність.
+        </div>
+      </div>
+
+      <!-- Покроковий алгоритм нашої роботи -->
+      <div style="margin-top: 50px;">
+        <h3 class="section-title" style="font-size: 1.6rem; margin-bottom: 8px;">ПОКРОКОВИЙ АЛГОРИТМ НАШОЇ РОБОТИ</h3>
+        <p class="section-subtitle" style="margin-bottom: 30px;">Прозорий та контрольований шлях від підбору лота до володіння</p>
+
+        <div class="approach-grid">
+          <div class="approach-card">
+            <div class="approach-num">01</div>
+            <h4>Аналіз лота (до 2 днів)</h4>
+            <p>Перевіряємо законність оцінки, суди та обтяження. Даємо однозначний висновок: «Купувати» чи «Ігнорувати».</p>
+          </div>
+
+          <div class="approach-card">
+            <div class="approach-num">02</div>
+            <h4>Участь та перемога</h4>
+            <p>Допомагаємо правильно оформити заявку, сплатити гарантійний внесок та безпечно виграти аукціон.</p>
+          </div>
+
+          <div class="approach-card">
+            <div class="approach-num">03</div>
+            <h4>Оформлення прав</h4>
+            <p>Контролюємо складання акта виконавцем, знімаємо всі арешти у нотаріуса та вносимо право в ДРРП.</p>
+          </div>
+
+          <div class="approach-card">
+            <div class="approach-num">04</div>
+            <h4>Фактичне володіння</h4>
+            <p>За потреби допомагаємо зняти з реєстрації попередніх мешканців та передати вам фізичні ключі від майна.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Чому обирають нас? -->
+      <div style="margin-top: 50px;">
+        <h3 class="section-title" style="font-size: 1.6rem; margin-bottom: 8px;">ЧОМУ ОБИРАЮТЬ НАС?</h3>
+        <p class="section-subtitle" style="margin-bottom: 30px;">Наші ключові переваги у сфері торгів арештованим майном</p>
+
+        <div class="why-us-grid">
+          <div class="why-card">
+            <h4><i class="fas fa-scale-balanced" style="color: var(--color-primary); margin-right: 8px;"></i> ВУЗЬКА СПЕЦІАЛІЗАЦІЯ</h4>
+            <p>Ми не просто юристи, ми експерти у виконавчому провадженні та торгах / аукціонах СЕТАМ і Prozorro.Продажі.</p>
+          </div>
+
+          <div class="why-card">
+            <h4><i class="fas fa-hand-holding-heart" style="color: var(--color-primary); margin-right: 8px;"></i> ЧЕСНІСТЬ</h4>
+            <p>Якщо лот критично небезпечний — ми прямо скажемо вам про це, зберігши ваші гроші та час.</p>
+          </div>
+
+          <div class="why-card">
+            <h4><i class="fas fa-trophy" style="color: var(--color-primary); margin-right: 8px;"></i> РЕЗУЛЬТАТИВНІСТЬ</h4>
+            <p>Працюємо до повного юридичного очищення майна в реєстрах та передачі вам ключів і документів власності.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       РОЗДІЛ 3: СЕРТИФІКАЦІЯ ПРОДУКЦІЇ ТА СЕРТИФІКАЦІЯ ISO
+       ========================================================================== -->
+  <section class="section section-bg-sage cert-section" id="certification">
+    <div class="container">
+      
+      <div class="badge-tag" style="display: table; margin: 0 auto 12px;">Оцінка відповідності та стандартизація</div>
+      <h2 class="section-title">СЕРТИФІКАЦІЯ ПРОДУКЦІЇ ТА СЕРТИФІКАЦІЯ ISO</h2>
+      <p class="section-subtitle">
+        Отримання сертифікатів відповідності, проведення лабораторних випробувань в акредитованій лабораторії та впровадження систем управління ISO.
+      </p>
+
+      <!-- Навігація по вкладках Сертифікації -->
+      <div class="services-nav-tabs">
+        <button class="tab-btn active" data-tab="tab-cert-products">
+          <i class="fas fa-certificate"></i> Сертифікація продукції
+        </button>
+        <button class="tab-btn" data-tab="tab-cert-iso">
+          <i class="fas fa-award"></i> Сертифікація ISO
+        </button>
+      </div>
+
+      <!-- Вкладка 1: СЕРТИФІКАЦІЯ ПРОДУКЦІЇ -->
+      <div class="tab-content-panel active" id="tab-cert-products">
+        
+        <!-- Ціновий банер -->
+        <div class="cert-price-banner">
+          <div class="cert-price-info">
+            <h3>Сертифікація продукції від 10 000,00 грн</h3>
+            <p>Документальне підтвердження незалежним органом відповідності продукції вимогам, визначеним певними нормативними документами.</p>
+          </div>
+          <div class="cert-price-tags">
+            <div class="price-pill-tag">
+              <span>Отримання сертифікату</span>
+              <strong>від 10 000,00 грн</strong>
+            </div>
+            <div class="price-pill-tag">
+              <span>Випробування продукції</span>
+              <strong>від 5 000,00 грн</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 колонки: Процес та Сертифікаційний центр -->
+        <div class="cert-content-grid">
+          
+          <!-- Колонка 1 -->
+          <div class="cert-box">
+            <div>
+              <div class="cert-box-title">
+                <i class="fas fa-shield-halved"></i>
+                <span>Суть та порядок сертифікації</span>
+              </div>
+              <div class="cert-text-body">
+                <p>
+                  <strong>Сертифікація</strong> — це процес документального підтвердження незалежним органом відповідності продукції вимогам, визначеним певними нормативними документами. Сертифікація продукції проводиться шляхом випробувань зразків виробів, аналізу технічної документації виробника, обстеження виробництва.
+                </p>
+                <p>
+                  <strong>Випробування</strong> дає можливість об’єктивно оцінити технічний рівень та якість виробів. Аналіз технічної документації та обстеження виробництва здійснюється з метою підтвердження можливості підприємства виготовляти продукцію відповідно до вимог чинних нормативних документів та для визначення періодичності та форм проведення технічного нагляду за виробництвом.
+                </p>
+                <p>
+                  <strong>Заявником (замовником)</strong> може бути будь-яка юридична або фізична особа — виробник, чи його уповноважений представник.
+                </p>
+              </div>
+            </div>
+            <div style="margin-top: 20px;">
+              <button class="btn btn-primary btn-sm open-consult-modal" data-service="Сертифікація продукції від 10 000 грн" style="width: 100%;">
+                <i class="fas fa-file-shield"></i> Подати заявку на сертифікат
+              </button>
+            </div>
+          </div>
+
+          <!-- Колонка 2 -->
+          <div class="cert-box">
+            <div>
+              <div class="cert-box-title">
+                <i class="fas fa-building-circle-check"></i>
+                <span>Сертифікаційний центр та документація</span>
+              </div>
+              <div class="cert-text-body">
+                <p>
+                  Функціонує сертифікаційний центр, надає послуги з підтвердження відповідності продукції вітчизняного та іноземного виробництва. Тут Ви можете отримати сертифікат відповідності на будівельні вироби, матеріали та конструкції, а також обладнання, що працює під тиском.
+                </p>
+                <p>
+                  Для початку робіт замовник подає заявку, в якій зазначає інформацію про продукцію та її виробництво. Разом із заявкою до органу подається технічна документація:
+                </p>
+                <ul class="cert-regulations-list">
+                  <li><strong>Опис виробів, сертифікат якості виробника, паспорт, інструкція;</strong></li>
+                  <li><strong>Висновок СЕС (санітарно-гігієнічний висновок якщо такий є);</strong></li>
+                  <li><strong>Результати випробувань виробника, документи внутрішнього контролю якості.</strong></li>
+                </ul>
+              </div>
+            </div>
+            <div style="margin-top: 20px; font-size: 0.9rem; color: var(--color-forest); font-weight: 600;">
+              <i class="fas fa-phone-alt"></i> Консультації щодо сертифікації: <a href="tel:0672031717" style="color: var(--color-forest); text-decoration: underline;">+380672031717</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Орган, лабораторія та гарантія якості -->
+        <div style="background: #ffffff; border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 30px; margin-bottom: 35px; box-shadow: var(--shadow-sm);">
+          <h4 style="color: var(--color-forest); font-size: 1.25rem; margin-bottom: 14px;">
+            <i class="fas fa-microscope" style="color: var(--color-primary);"></i> Лабораторна база та юридичне значення сертифіката
+          </h4>
+          <p style="font-size: 0.95rem; line-height: 1.65; color: var(--color-text-dark);">
+            Орган з оцінки відповідності аналізує надану документацію, визначає та погоджує з заявником перелік робіт, необхідних для підтвердження відповідності продукції. 
+            Одним із основних етапів є проведення тестування продукції. <strong>Маємо окрему лабораторію, а також співпрацюємо з провідними випробувальними центрами України та Європи.</strong>
+          </p>
+          <p style="font-size: 0.95rem; line-height: 1.65; color: var(--color-text-dark); margin-bottom: 0;">
+            Після завершення робіт орган видає заявнику <strong>сертифікат відповідності</strong>. Цей сертифікат є обов'язковим документом, що служить офіційним підтвердженням відповідності встановленим критеріям, дає гарантію якості споживачам і контролюючим органам, допомагає виробникам уникнути юридичних проблем і потенційних штрафів та демонструє серйозне ставлення до безпеки.
           </p>
         </div>
 
-        <div class="service-cards-grid">
+        <!-- Детальний блок: УкрСЕПРО та Європейська оцінка відповідності -->
+        <div style="background: #ffffff; border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 32px; margin-bottom: 35px; box-shadow: var(--shadow-sm);">
+          <div class="badge-tag">Історичний контекст та інтеграція в ЄС</div>
+          <h3 style="color: var(--color-forest); font-size: 1.45rem; margin-bottom: 16px;">
+            Від УкрСЕПРО до європейського способу оцінки відповідності
+          </h3>
           
-          <!-- 1. Тендерне право -->
-          <div class="service-card">
-            <div class="service-card-header">
-              <span class="service-badge">Спеціалізація</span>
-              <h3 class="service-card-title">1. Тендерне право</h3>
-              <div class="service-card-price">від 2 000 грн <span>/ комплексно</span></div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; font-size: 0.95rem; line-height: 1.65; color: var(--color-text-dark);">
+            <div>
+              <h4 style="color: var(--color-primary); font-size: 1.15rem; margin-bottom: 10px;">
+                <i class="fas fa-clock-rotate-left"></i> Система УкрСЕПРО
+              </h4>
+              <p>
+                <strong>УкрСЕПРО</strong> — українська національна система сертифікації, яка визначала правила сертифікації в Україні до 1 січня 2018 року. Дана система функціонувала згідно із Декретом Кабінету Міністрів України № 46-93 від 10 травня 1993 року «Про стандартизацію і сертифікацію» та передбачала проведення обов’язкової та добровільної сертифікації.
+              </p>
+              <p>
+                Система УкрСЕПРО відігравала важливу роль у забезпеченні безпеки та якості продукції, на ринку України, і її скасування ознаменувало значну зміну підходу країни до сертифікації та технічного регулювання. Згідно з новою системою, виробники все ще повинні отримати сертифікат, щоб продемонструвати відповідність стандартам, але процес став більш оптимізованим і узгодженим з найкращими міжнародними практиками.
+              </p>
+              <p>
+                Орган з оцінки відповідності, який надає такі Сертифікати, акредитовано Національним агентством з акредитації України (НААУ) та визнано низкою міжнародних організацій.
+              </p>
             </div>
-            <ul class="service-features-list">
-              <li>Аналіз тендерної документації та вимог замовника;</li>
-              <li>Виявлення потенційно дискримінаційних вимог;</li>
-              <li>Підготовка пропозицій та документів переможця;</li>
-              <li>Оскарження в АМКУ та неправомірних рішень у ДАСУ;</li>
-              <li>Підготовка вимог та запитів на роз'яснення;</li>
-              <li>Правовий супровід виконання договорів за результатами торгів.</li>
-            </ul>
-            <div class="service-card-footer">
-              <button class="btn btn-primary btn-sm open-consult-modal" data-service="Тендерне право" style="width: 100%;">Отримати консультацію</button>
+
+            <div>
+              <h4 style="color: var(--color-primary); font-size: 1.15rem; margin-bottom: 10px;">
+                <i class="fas fa-globe-europe"></i> Оцінка відповідності та Технічні регламенти
+              </h4>
+              <p>
+                Перехід від української системи технічного регулювання (УкрСЕПРО) до європейського способу оцінки відповідності продукції є важливим кроком для інтеграції України до Європейського Союзу. Європейський Союз імплементує Директиви Нового Підходу з 1980-х років. Цей підхід базується на системі саморегулювання та оцінки ризиків.
+              </p>
+              <p>
+                У рамках переходу розроблено технічні регламенти як аналоги директив ЄС. Орган з оцінки відповідності для виконання як третьою стороною завдань з оцінки відповідності акредитований згідно з наступними регламентами:
+              </p>
+              <ul class="cert-regulations-list" style="margin-top: 8px;">
+                <li><strong>Закон України «Про надання будівельної продукції на ринку»;</strong></li>
+                <li><strong>Технічний регламент обладнання, що працює під тиском</strong> (затверджений постановою КМУ від 16.01.2019 № 27);</li>
+                <li><strong>Технічний регламент будівельних виробів (продукції)</strong> (затверджений постановою КМУ від 20.12.2006 № 1764).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Блок: Випробування продукції -->
+        <div style="background: linear-gradient(135deg, var(--color-bg-sage-soft) 0%, #ffffff 100%); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 32px; box-shadow: var(--shadow-sm);">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px; margin-bottom: 20px;">
+            <div>
+              <span class="service-badge" style="background: var(--color-forest); color: #ffffff;">Лабораторний центр</span>
+              <h3 style="color: var(--color-forest); font-size: 1.45rem; margin-top: 8px; margin-bottom: 6px;">
+                Випробування продукції
+              </h3>
+              <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 0;">
+                Комплексні лабораторні дослідження, підтвердження технічних показників та оформлення офіційного протоколу випробувань.
+              </p>
+            </div>
+            <div style="background: #ffffff; padding: 12px 20px; border-radius: var(--radius-pill); border: 2px solid var(--color-primary); text-align: center;">
+              <span style="font-size: 0.8rem; color: var(--color-text-muted); display: block;">Вартість за одну послугу</span>
+              <strong style="font-size: 1.35rem; color: var(--color-primary); font-weight: 900;">від 5 000,00 грн</strong>
             </div>
           </div>
 
-          <!-- 2. Господарське право -->
-          <div class="service-card">
-            <div class="service-card-header">
-              <span class="service-badge">Для бізнесу</span>
-              <h3 class="service-card-title">2. Господарське право</h3>
-              <div class="service-card-price">від 1 000 грн <span>/ за напрямок</span></div>
-            </div>
-            <ul class="service-features-list">
-              <li><strong>Договірна робота (1 000 - 7 000 грн):</strong> розробка договорів, дод. угод, аудит ризиків, супровід переговорів;</li>
-              <li><strong>Претензійно-позовна робота (від 5 000 грн):</strong> претензії, стягнення боргів, штрафів, пені, позови та суди;</li>
-              <li><strong>Супровід господарської діяльності (від 50 000 грн/міс):</strong> комплексний юридичний аутсорсинг компаній.</li>
-            </ul>
-            <div class="service-card-footer">
-              <button class="btn btn-primary btn-sm open-consult-modal" data-service="Господарське право" style="width: 100%;">Отримати консультацію</button>
-            </div>
+          <div style="font-size: 0.95rem; line-height: 1.65; color: var(--color-text-dark); margin-bottom: 24px;">
+            <p>
+              Випробування продукції є дуже важливим етапом у процесі її виробництва. Воно дозволяє виробнику перевірити, наскільки продукт відповідає вимогам нормативних документів, і виявити можливі дефекти. Це дозволяє вчасно виправляти помилки при проєктуванні та виготовленні продукції та забезпечувати її високу якість.
+            </p>
+            <p>
+              Результати наводяться в <strong>протоколі випробувань</strong> — офіційному документі, який відображає фактичні значення показників продукції та є інструментом підтвердження відповідності стандартам і вимогам якості.
+            </p>
+            <p style="margin-bottom: 0;">
+              Випробувальна лабораторія надає комплексні послуги з випробувань широкого спектру будівельних матеріалів, виробів і конструкцій, а також протипожежного обладнання та обладнання, що працює під тиском. Наше сучасне випробувальне обладнання дозволяє проводити випробування швидко та з високою точністю.
+            </p>
           </div>
 
-          <!-- 3. Цивільне право -->
-          <div class="service-card">
-            <div class="service-card-header">
-              <span class="service-badge">Захист прав</span>
-              <h3 class="service-card-title">3. Цивільне право</h3>
-              <div class="service-card-price">від 1 500 грн <span>/ за послугу</span></div>
+          <!-- Картка завантаження заявки -->
+          <div class="cert-download-card">
+            <div class="cert-download-info">
+              <div class="cert-download-icon">
+                <i class="fas fa-file-word"></i>
+              </div>
+              <div class="cert-download-text">
+                <h4>Форма заявки на проведення випробувань</h4>
+                <p>Ви можете завантажити офіційну форму заявки на проведення випробувань для швидкого оформлення замовлення.</p>
+              </div>
             </div>
-            <ul class="service-features-list">
-              <li><strong>Договірні відносини (1 500 - 7 000 грн):</strong> цивільно-правові угоди, розірвання, недійсність;</li>
-              <li><strong>Майнові спори (від 5 000 грн):</strong> право власності, витребування майна, поділ, стягнення збитків;</li>
-              <li><strong>Спадкове право (від 2 000 грн):</strong> оформлення спадщини, оскарження заповітів, спори між спадкоємцями;</li>
-              <li><strong>Цивільні спори (від 2 000 грн):</strong> досудове врегулювання, суди, виконавче провадження.</li>
-            </ul>
-            <div class="service-card-footer">
-              <button class="btn btn-primary btn-sm open-consult-modal" data-service="Цивільне право" style="width: 100%;">Отримати консультацію</button>
-            </div>
+            <a href="assets/docs/zaiavka-na-vyprobuvannia.docx" download="Заявка_на_проведення_випробувань.docx" class="download-app-btn">
+              <i class="fas fa-download"></i> Завантажити форму заявки (.docx)
+            </a>
           </div>
 
-          <!-- 4. Сімейне право -->
-          <div class="service-card">
-            <div class="service-card-header">
-              <span class="service-badge">Приватна практика</span>
-              <h3 class="service-card-title">4. Сімейне право</h3>
-              <div class="service-card-price">від 1 000 грн <span>/ за процедуру</span></div>
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--color-border);">
+            <div style="font-size: 0.92rem; color: var(--color-forest); font-weight: 600;">
+              <i class="fas fa-headset"></i> Отримати додаткову інформацію щодо випробувань: <a href="tel:0672031717" style="color: var(--color-forest); text-decoration: underline;">+380672031717</a> або надішліть запит на пошту.
             </div>
-            <ul class="service-features-list">
-              <li><strong>Розірвання шлюбу (від 1 000 грн):</strong> через суд, спільна заява, позовні заяви, представництво;</li>
-              <li><strong>Діти:</strong> визначення місця проживання, порядок участі у вихованні, стягнення аліментів, батьківство;</li>
-              <li><strong>Майнові відносини (10 000 - 20 000 грн):</strong> поділ майна подружжя, частки в бізнесі, нерухомість;</li>
-              <li><strong>Шлюбний договір (від 1 000 грн):</strong> розробка індивідуального шлюбного контракту, зміни, експертиза.</li>
-            </ul>
-            <div class="service-card-footer">
-              <button class="btn btn-primary btn-sm open-consult-modal" data-service="Сімейне право" style="width: 100%;">Отримати консультацію</button>
-            </div>
-          </div>
-
-          <!-- 5. Корпоративне право -->
-          <div class="service-card">
-            <div class="service-card-header">
-              <span class="service-badge">Бізнес та інвестиції</span>
-              <h3 class="service-card-title">5. Корпоративне право</h3>
-              <div class="service-card-price">від 2 000 грн <span>/ за послугу</span></div>
-            </div>
-            <ul class="service-features-list">
-              <li><strong>Створення бізнесу (2 000 - 10 000 грн):</strong> реєстрація ТОВ, статути, корпоративні договори, структура власності;</li>
-              <li><strong>Супровід діяльності (5 000 - 15 000 грн):</strong> протоколи зборів, зміна директора, учасників, статуту, КВЕД;</li>
-              <li><strong>Корпоративні угоди (5 000 - 10 000 грн):</strong> купівля-продаж часток, структурування відносин;</li>
-              <li><strong>Корпоративні спори (від 10 000 грн):</strong> захист прав учасників товариства, оскарження зборів;</li>
-              <li><strong>Реорганізація та ліквідація (5 000 - 15 000 грн):</strong> злиття, поділ, повне припинення бізнесу.</li>
-            </ul>
-            <div class="service-card-footer">
-              <button class="btn btn-primary btn-sm open-consult-modal" data-service="Корпоративне право" style="width: 100%;">Отримати консультацію</button>
-            </div>
+            <button class="btn btn-primary btn-sm open-consult-modal" data-service="Випробування продукції від 5 000 грн">
+              <i class="fas fa-envelope"></i> Замовити лабораторне випробування
+            </button>
           </div>
 
         </div>
+
+      </div>
+
+      <!-- Вкладка 2: СЕРТИФІКАЦІЯ ISO -->
+      <div class="tab-content-panel" id="tab-cert-iso">
+        
+        <!-- Ціновий банер ISO -->
+        <div class="cert-price-banner">
+          <div class="cert-price-info">
+            <h3>РОЗДІЛ: СЕРТИФІКАЦІЯ ISO від 15 000 грн</h3>
+            <p>Вартість за отримання сертифікату ISO. Сертифікація систем управління за міжнародними та національними стандартами ДСТУ.</p>
+          </div>
+          <div class="cert-price-tags">
+            <div class="price-pill-tag">
+              <span>Сертифікат ISO</span>
+              <strong>від 15 000,00 грн</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 стандарти ISO -->
+        <h3 style="color: var(--color-forest); font-size: 1.35rem; margin-bottom: 18px;">
+          Ми організовуємо проведення сертифікації наступних систем управління:
+        </h3>
+        <div class="iso-standards-grid">
+          
+          <!-- ISO 9001 -->
+          <div class="iso-card">
+            <span class="iso-badge">Якість менеджменту</span>
+            <h4>ДСТУ ISO 9001:2015</h4>
+            <p>Управління якістю на відповідність вимогам ДСТУ ISO 9001:2015 Системи управління якістю Вимоги (ISO 9001:2015, IDT); ISO 9001:2015 Quality management systems – Requirements.</p>
+            <div class="iso-norm-spec">ДСТУ ISO 9001:2015 / ISO 9001:2015</div>
+          </div>
+
+          <!-- ISO 14001 -->
+          <div class="iso-card">
+            <span class="iso-badge">Екологічний менеджмент</span>
+            <h4>ДСТУ ISO 14001:2015</h4>
+            <p>Екологічного управління на відповідність вимогам ДСТУ ISO 14001:2015 Системи екологічного управління. Вимоги та настанови щодо застосовування (ISO 14001:2015, IDT); ISO 14001:2015 Environmental management systems.</p>
+            <div class="iso-norm-spec">ДСТУ ISO 14001:2015 / ISO 14001:2015</div>
+          </div>
+
+          <!-- ISO 22000 НАССР -->
+          <div class="iso-card">
+            <span class="iso-badge">Безпечність харчових продуктів (НАССР)</span>
+            <h4>ДСТУ ISO 22000:2019</h4>
+            <p>Управління безпечністю харчових продуктів (НАССР) на відповідність вимогам ДСТУ ISO 22000:2019 Системи керування безпечністю харчових продуктів. Вимоги до будь-якої організації в харчовому ланцюзі (ISO 22000:2018, IDT).</p>
+            <div class="iso-norm-spec">ДСТУ ISO 22000:2019 / HACCP</div>
+          </div>
+
+          <!-- ISO 45001 -->
+          <div class="iso-card">
+            <span class="iso-badge">Охорона праці</span>
+            <h4>ДСТУ ISO 45001:2019</h4>
+            <p>Управління охороною здоров’я та безпеки праці на відповідність вимогам ДСТУ ISO 45001:2019 Системи управління охороною здоров’я та безпекою праці. Вимоги та настанови щодо застосування (ISO 45001:2018, IDT); ISO 45001:2018 Occupational health and safety management systems.</p>
+            <div class="iso-norm-spec">ДСТУ ISO 45001:2019 / ISO 45001:2018</div>
+          </div>
+
+        </div>
+
+        <!-- Етапи сертифікації: Подання заявки, Етап 1, Етап 2, Нагляд, Повторна сертифікація -->
+        <div style="background: #ffffff; border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 32px; margin-bottom: 35px; box-shadow: var(--shadow-sm);">
+          <h3 style="color: var(--color-forest); font-size: 1.35rem; margin-bottom: 8px;">
+            Опис діяльності щодо первинної та подальшої сертифікації
+          </h3>
+          <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 24px;">
+            Наша діяльність та Ваша сертифікація ґрунтуються на таких ключових нормативних документах: <strong>ДСТУ EN ISO/IEC 17021-1:2017, ISO 2003-1:2022</strong>.
+          </p>
+
+          <div class="iso-steps-grid">
+            <div class="iso-step-card">
+              <div class="iso-step-number">01</div>
+              <h5>Подання заявки</h5>
+              <p>Процес починається з подання Вашою організацією офіційної заявки (ISO 9001, 14001, 22000, 45001) із зазначенням сфери, процесів, ресурсів та аутсорсингу.</p>
+            </div>
+
+            <div class="iso-step-card">
+              <div class="iso-step-number">02</div>
+              <h5>Етап 1: Документарний аудит</h5>
+              <p>Перевірка задокументованої інформації Вашої системи управління, оцінка готовності до Етапу 2, збір даних та визначення ресурсів для подальшого аудиту.</p>
+            </div>
+
+            <div class="iso-step-card">
+              <div class="iso-step-number">03</div>
+              <h5>Етап 2: Аудит на місці</h5>
+              <p>Оцінка впровадження та результативності на місці розташування: моніторинг цілей, законодавчі вимоги, процеси, проведення внутрішніх аудитів.</p>
+            </div>
+
+            <div class="iso-step-card">
+              <div class="iso-step-number">04</div>
+              <h5>Нагляд та ресертифікація</h5>
+              <p>Наглядові аудити щонайменше 1 раз на рік для забезпечення відповідності, та повторна сертифікація на 3-й рік трирічного циклу.</p>
+            </div>
+          </div>
+
+          <!-- Правила, умови та права клієнтів -->
+          <div style="background: var(--color-bg-sage-light); border-radius: var(--radius-sm); padding: 22px; margin-top: 24px; font-size: 0.92rem; line-height: 1.6; color: var(--color-text-dark);">
+            <h4 style="color: var(--color-forest); font-size: 1.05rem; margin-bottom: 10px;">
+              <i class="fas fa-scale-balanced"></i> Умови, нормативні вимоги, права та обов'язки:
+            </h4>
+            <p>
+              <strong>Процес для надання, відмови, розширення або скасування:</strong> Всі рішення щодо статусу сертифікації приймаються органом з сертифікації після ретельного аналізу результатів аудитів та додаткових даних.
+            </p>
+            <p>
+              <strong>Сплата за послуги:</strong> Вартість послуг залежить від багатьох факторів та визначається органом з сертифікації згідно затвердженої процедури і детально зазначена у договорі на сертифікацію. Орган інформує про тривалість аудиту та її обґрунтування.
+            </p>
+            <p>
+              <strong>Вимоги органу до клієнтів:</strong> Постійна відповідність стандарту, забезпечення повного доступу до документації, ділянок, процесів і персоналу, а також присутність спостерігачів (аудиторів з акредитації чи стажистів) за необхідності.
+            </p>
+            <p>
+              <strong>Права та обов'язки клієнтів:</strong> Дотримання правил посилання на статус у рекламі. Забороняється робити оманливі заяви щодо сертифікації або використовувати посилання у спосіб, що може припускати сертифікацію окремої продукції чи процесу. При скасуванні сертифікації використання рекламних матеріалів припиняється.
+            </p>
+            <p style="margin-bottom: 0;">
+              <strong>Процеси вирішення скарг та розглядання апеляцій:</strong> Орган сертифікації має задокументовані процедури для отримання, оцінювання та прийняття рішень щодо скарг та апеляцій, забезпечуючи неупереджений та конфіденційний розгляд. Ми завжди готові надати підтримку на кожному етапі співпраці.
+            </p>
+          </div>
+
+          <div style="margin-top: 28px; text-align: center;">
+            <button class="btn btn-primary open-consult-modal" data-service="Сертифікація ISO від 15 000 грн">
+              <i class="fas fa-award"></i> Замовити сертифікацію ISO
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       РОЗДІЛ 4: ЮРИДИЧНИЙ ТА КОНСАЛТИНГОВИЙ СУПРОВІД
+       ========================================================================== -->
+  <section class="section" id="law-practice">
+    <div class="container">
+      
+      <div class="badge-tag" style="display: table; margin: 0 auto 12px;">Правовий захист бізнесу та громадян</div>
+      <h2 class="section-title">ЮРИДИЧНИЙ ТА КОНСАЛТИНГОВИЙ СУПРОВІД</h2>
+      <p class="section-subtitle">
+        Юридичні консультації, допомога, підготовка юридичних документів, захист інтересів в судах юридичних та фізичних осіб.
+      </p>
+
+      <div class="section-showcase-card">
+        <div class="showcase-content">
+          <div class="badge-tag light" style="background: rgba(46,78,42,0.1); color: var(--color-forest); display: inline-table; margin-bottom: 8px;">Правовий захист бізнесу</div>
+          <h3>Загальна юридична практика та захист у судах усіх інстанцій</h3>
+          <p>
+            Надійний правовий радник: індивідуальний підхід, супровід переговорів, претензійно-позовна робота та представництво інтересів у судових інстанціях усіх юрисдикцій. Надаємо всебічну підтримку в сучасному комфортному офісі та дистанційно по всій території України.
+          </p>
+          <div class="showcase-tags">
+            <span class="showcase-tag"><i class="fas fa-scale-balanced"></i> Господарське право</span>
+            <span class="showcase-tag"><i class="fas fa-users"></i> Корпоративне право</span>
+            <span class="showcase-tag"><i class="fas fa-file-contract"></i> Договірна робота</span>
+            <span class="showcase-tag"><i class="fas fa-building"></i> Прийом в офісі & Online</span>
+          </div>
+        </div>
+        <div class="showcase-image-wrap">
+          <img src="assets/images/office-reception.png" alt="Сучасний офіс УКРТЕНДЕРКОНСАЛТ" loading="lazy">
+          <div class="showcase-badge-pill">
+            <i class="fas fa-door-open"></i>
+            <span>Сучасний офіс & Конфіденційність</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-cards-grid">
+        
+        <!-- 1. Тендерне право -->
+        <div class="service-card">
+          <div class="service-card-header">
+            <span class="service-badge">Спеціалізація</span>
+            <h3 class="service-card-title">1. Тендерне право</h3>
+            <div class="service-card-price">від 2 000 грн <span>- за послугу</span></div>
+          </div>
+          <ul class="service-features-list">
+            <li>Аналіз тендерної документації та вимог замовника;</li>
+            <li>Виявлення потенційно дискримінаційних вимог;</li>
+            <li>Підготовка пропозицій та документів переможця;</li>
+            <li>Скарги до органів ДАСУ;</li>
+            <li>Підготовка вимог та запитів на роз'яснення;</li>
+            <li>Правовий супровід виконання договорів за результатами торгів.</li>
+          </ul>
+          <div class="service-card-footer">
+            <button class="btn btn-primary btn-sm open-consult-modal" data-service="Тендерне право (від 2 000 грн за послугу)" style="width: 100%;">Отримати консультацію</button>
+          </div>
+        </div>
+
+        <!-- 2. Господарське право -->
+        <div class="service-card">
+          <div class="service-card-header">
+            <span class="service-badge">Для бізнесу</span>
+            <h3 class="service-card-title">2. Господарське право</h3>
+            <div class="service-card-price">від 1 000 грн <span>- за послугу</span></div>
+          </div>
+          <ul class="service-features-list">
+            <li><strong>Договірна робота (1 000 - 7 000 грн):</strong> розробка договорів, дод. угод, аудит ризиків, супровід переговорів;</li>
+            <li><strong>Претензійно-позовна робота (від 5 000 грн):</strong> претензії, стягнення боргів, штрафів, пені, позови та суди;</li>
+            <li><strong>Супровід господарської діяльності (від 50 000 грн):</strong> комплексний юридичний аутсорсинг компаній.</li>
+          </ul>
+          <div class="service-card-footer">
+            <button class="btn btn-primary btn-sm open-consult-modal" data-service="Господарське право (від 1 000 грн за послугу)" style="width: 100%;">Отримати консультацію</button>
+          </div>
+        </div>
+
+        <!-- 3. Цивільне право -->
+        <div class="service-card">
+          <div class="service-card-header">
+            <span class="service-badge">Захист прав</span>
+            <h3 class="service-card-title">3. Цивільне право</h3>
+            <div class="service-card-price">від 1 500 грн <span>- за послугу</span></div>
+          </div>
+          <ul class="service-features-list">
+            <li><strong>Договірні відносини (1 500 - 7 000 грн):</strong> цивільно-правові угоди, розірвання, недійсність;</li>
+            <li><strong>Майнові спори (від 5 000 грн):</strong> право власності, витребування майна, поділ, стягнення збитків;</li>
+            <li><strong>Спадкове право (від 2 000 грн):</strong> оформлення спадщини, оскарження заповітів, спори між спадкоємцями;</li>
+            <li><strong>Цивільні спори (від 2 000 грн):</strong> досудове врегулювання, суди, виконавче провадження.</li>
+          </ul>
+          <div class="service-card-footer">
+            <button class="btn btn-primary btn-sm open-consult-modal" data-service="Цивільне право (від 1 500 грн за послугу)" style="width: 100%;">Отримати консультацію</button>
+          </div>
+        </div>
+
+        <!-- 4. Сімейне право -->
+        <div class="service-card">
+          <div class="service-card-header">
+            <span class="service-badge">Приватна практика</span>
+            <h3 class="service-card-title">4. Сімейне право</h3>
+            <div class="service-card-price">від 1 000 грн. - за послугу</div>
+          </div>
+          <ul class="service-features-list">
+            <li><strong>Розірвання шлюбу (від 1 000 грн):</strong> через суд, спільна заява, позовні заяви, представництво;</li>
+            <li><strong>Діти:</strong> визначення місця проживання, порядок участі у вихованні, стягнення аліментів, батьківство;</li>
+            <li><strong>Майнові відносини (10 000 - 20 000 грн):</strong> поділ майна подружжя, частки в бізнесі, нерухомість;</li>
+            <li><strong>Шлюбний договір (від 1 000 грн):</strong> розробка індивідуального шлюбного контракту, зміни, експертиза.</li>
+          </ul>
+          <div class="service-card-footer">
+            <button class="btn btn-primary btn-sm open-consult-modal" data-service="Сімейне право (від 1 000 грн. - за послугу)" style="width: 100%;">Отримати консультацію</button>
+          </div>
+        </div>
+
+        <!-- 5. Корпоративне право -->
+        <div class="service-card">
+          <div class="service-card-header">
+            <span class="service-badge">Бізнес та інвестиції</span>
+            <h3 class="service-card-title">5. Корпоративне право</h3>
+            <div class="service-card-price">від 2 000 грн <span>- за послугу</span></div>
+          </div>
+          <ul class="service-features-list">
+            <li><strong>Створення бізнесу (2 000 - 10 000 грн):</strong> реєстрація ТОВ, статути, корпоративні договори, структура власності;</li>
+            <li><strong>Супровід діяльності (5 000 - 15 000 грн):</strong> протоколи зборів, зміна директора, учасників, статуту, КВЕД;</li>
+            <li><strong>Корпоративні угоди (5 000 - 10 000 грн):</strong> купівля-продаж часток, структурування відносин;</li>
+            <li><strong>Корпоративні спори (від 10 000 грн):</strong> захист прав учасників товариства, оскарження зборів;</li>
+            <li><strong>Реорганізація та ліквідація (5 000 - 15 000 грн):</strong> злиття, поділ, повне припинення бізнесу.</li>
+          </ul>
+          <div class="service-card-footer">
+            <button class="btn btn-primary btn-sm open-consult-modal" data-service="Корпоративне право (від 2 000 грн за послугу)" style="width: 100%;">Отримати консультацію</button>
+          </div>
+        </div>
+
       </div>
 
     </div>
@@ -809,13 +1452,21 @@
             Тендери. Право. Результат.
           </h3>
           <p>
-            <strong>УКРТЕНДЕРКОНСАЛТ</strong> — консалтингова та юридична компанія, що спеціалізується на супроводі публічних закупівель, тендерних процедурах та юридичному захисті інтересів бізнесу.
+            <strong>УКРТЕНДЕРКОНСАЛТ</strong> — консалтингова компанія, що спеціалізується на:
+          </p>
+          <ul class="about-spec-list">
+            <li><i class="fas fa-check-circle"></i> <span>Супроводі публічних закупівель товарів, робіт і послуг (Prozorro) для учасників і замовників закупівель.</span></li>
+            <li><i class="fas fa-check-circle"></i> <span>Веде юридичну практику, скарги до органів ДАСУ.</span></li>
+            <li><i class="fas fa-check-circle"></i> <span>Супроводжує публічні продажі та здачі в оренду державного та комунального майна, а також реалізації інших активів (Prozorro.Sale) для організаторів та покупців таких продажів та здачі в оренду;</span></li>
+          </ul>
+          <p>
+            Проводить юридичні консультації, готує юридичні документи, захищає права та інтереси юридичних та фізичних осіб в судах.
           </p>
           <p>
-            Ми допомагаємо замовникам та учасникам закупівель розібратися у складних вимогах законодавства, правильно підготувати документи, оцінити юридичні ризики та приймати обґрунтовані рішення.
+            Ми допомагаємо замовникам та учасникам закупівель, організаторам та покупцям прозоро продажі розібратися у складних вимогах законодавства, правильно підготувати документи, оцінити юридичні ризики та приймати обґрунтовані рішення.
           </p>
           <p>
-            <strong>Наш підхід</strong> — це поєднання тендерної експертизи, юридичного аналізу та практичного супроводу. Ми не обмежуємося механічною підготовкою документів. Наше завдання — зрозуміти ситуацію клієнта, визначити можливі ризики та запропонувати конкретний алгоритм дій.
+            <strong>Наш підхід</strong> — це поєднання експертизи, юридичного аналізу та практичного супроводу. Ми не обмежуємося механічною підготовкою документів. Наше завдання — зрозуміти ситуацію клієнта, визначити можливі ризики та запропонувати конкретний алгоритм дій.
           </p>
           
           <div style="background: var(--color-bg-sage-soft); padding: 18px 22px; border-radius: var(--radius-sm); border-left: 4px solid var(--color-primary); margin-top: 24px;">
@@ -829,8 +1480,8 @@
         <div class="about-image-wrapper">
           <img src="assets/images/about-team.jpg" alt="Команда юристів УКРТЕНДЕРКОНСАЛТ">
           <div class="about-badge-floating">
-            <strong>10+ років досвіду</strong>
-            <span>Понад 5 600 успішних процедур</span>
+            <strong>18 років досвіду</strong>
+            <span>з 2008 року • Понад 5 600 процедур</span>
           </div>
         </div>
       </div>
@@ -920,10 +1571,10 @@
 
         <div class="stat-box">
           <div class="stat-number-wrapper">
-            <span class="stat-number" data-target="10">0</span>
+            <span class="stat-number" data-target="18">0</span>
             <span class="suffix">+</span>
           </div>
-          <div class="stat-title">Років досвіду в праві</div>
+          <div class="stat-title">Років досвіду (з 2008 року)</div>
         </div>
 
         <div class="stat-box">
@@ -1019,6 +1670,52 @@
             <h4>Рахункова палата України</h4>
             <p>Вищий орган аудиту фінансових коштів та контролю публічних фінансів.</p>
             <span class="resource-link-text">rp.gov.ua <i class="fas fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <!-- Додаткові корисні ресурси з ТЗ -->
+        <a href="https://radnuk.com.ua/" target="_blank" rel="noopener noreferrer" class="resource-card">
+          <div class="resource-icon"><i class="fas fa-book-bookmark"></i></div>
+          <div class="resource-info">
+            <h4>Радник у сфері публічних закупівель</h4>
+            <p>Практичний журнал та аналітичний портал для замовників і постачальників: роз'яснення та зразки документів.</p>
+            <span class="resource-link-text">radnuk.com.ua <i class="fas fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <a href="https://tndr.com.ua/" target="_blank" rel="noopener noreferrer" class="resource-card">
+          <div class="resource-icon"><i class="fas fa-newspaper"></i></div>
+          <div class="resource-info">
+            <h4>Журнал «Тендер»</h4>
+            <p>Експертний портал про публічні закупівлі: актуальні зміни законодавства, практика АМКУ та алгоритми участі.</p>
+            <span class="resource-link-text">tndr.com.ua <i class="fas fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <a href="https://setam.net.ua/" target="_blank" rel="noopener noreferrer" class="resource-card">
+          <div class="resource-icon"><i class="fas fa-scale-unbalanced-flip"></i></div>
+          <div class="resource-info">
+            <h4>ДП «СЕТАМ»</h4>
+            <p>Система електронних торгів арештованим майном, активами банків та комерційними лотами в Україні.</p>
+            <span class="resource-link-text">setam.net.ua <i class="fas fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <a href="https://opendatabot.ua/" target="_blank" rel="noopener noreferrer" class="resource-card">
+          <div class="resource-icon"><i class="fas fa-database"></i></div>
+          <div class="resource-info">
+            <h4>Опендатабот</h4>
+            <p>Моніторинг державних реєстрів, перевірка судових рішень, податкових боргів та статусів компаній в ЄДР.</p>
+            <span class="resource-link-text">opendatabot.ua <i class="fas fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <a href="https://youcontrol.com.ua/" target="_blank" rel="noopener noreferrer" class="resource-card">
+          <div class="resource-icon"><i class="fas fa-chart-pie"></i></div>
+          <div class="resource-info">
+            <h4>YouControl</h4>
+            <p>Повне досьє та аналітична система перевірки контрагентів, бенефіціарів, зв'язків та факторів ризику.</p>
+            <span class="resource-link-text">youcontrol.com.ua <i class="fas fa-arrow-up-right-from-square"></i></span>
           </div>
         </a>
 
@@ -1158,69 +1855,137 @@
 
       <div class="news-grid">
         
-        <!-- Новина 1 -->
+        <!-- Новина 1: Публічні закупівлі -->
         <div class="news-card">
-          <div class="news-date"><i class="far fa-calendar-alt"></i> 14 жовтня 2026</div>
-          <h3 class="news-title">Особливості здійснення закупівель у період воєнного стану: оновлені норми</h3>
-          <div class="news-field">
-            <strong>Короткий опис:</strong>
-            <p>Уряд затвердив уточнені правила для відкритих торгів з особливостями та процедур запиту ціни.</p>
+          <div class="news-card-header">
+            <div class="news-card-top-meta">
+              <span class="news-badge"><i class="fas fa-file-contract"></i> Публічні закупівлі</span>
+              <span class="news-date"><i class="far fa-calendar-alt"></i> Жовтень 2026</span>
+            </div>
+            <h3 class="news-title">Зміни у сфері публічних закупівель: законопроєкт №16127, Постанова №1178 та реформи</h3>
           </div>
-          <div class="news-field">
-            <strong>Що змінилося?</strong>
-            <p>Скорочено строки розгляду для окремих товарних категорій та вдосконалено вимоги локалізації виробництва.</p>
+          <div class="news-lead">
+            У жовтні 2026 року у сфері публічних закупівель відбулися важливі законодавчі та практичні зміни, що впливають на роботу замовників та учасників:
           </div>
-          <div class="news-field">
-            <strong>Кого це стосується?</strong>
-            <p>Усіх державних Замовників, Уповноважених осіб та Учасників відкритих торгів.</p>
+          <div class="news-subitems-list">
+            <div class="news-subitem">
+              <div class="news-subitem-title"><i class="fas fa-landmark"></i> Законопроєкт №16127</div>
+              <p>Кабмін зареєстрував у Верховній Раді законопроєкт щодо виключення пункту 7 розділу XIV Прикінцевих та перехідних положень Закону №4888-IX задля усунення правових колізій та приведення норм у відповідність до Конституції України та Цивільного кодексу.</p>
+            </div>
+            <div class="news-subitem">
+              <div class="news-subitem-title"><i class="fas fa-file-shield"></i> Постанова №1178 та суміжні правила</div>
+              <p>З вересня 2026 року діють оновлені правила за Постановою КМУ №957, а також набули чинності нові вимоги щодо локалізації виробництва, обов'язкових закупівель газу для бюджетних установ (постанова №1179) та використання електронних каталогів Prozorro Market.</p>
+            </div>
+            <div class="news-subitem">
+              <div class="news-subitem-title"><i class="fas fa-shield-halved"></i> Оборонні закупівлі та рішення АМКУ</div>
+              <p>Міноборони перерозподіляє 15,6 млрд грн на першочергові потреби армії. Водночас АМКУ посилив контроль та оштрафував учасників антиконкурентної змови на 192,5 млн грн.</p>
+            </div>
+            <div class="news-subitem">
+              <div class="news-subitem-title"><i class="fas fa-euro-sign"></i> Ukraine Facility та євроінтеграційні норми</div>
+              <p>Новий транш допомоги від ЄС (близько 2,9 млрд євро) безпосередньо вимагає дотримання суворих стандартів прозорості та реалізації реформ у сфері публічних фінансів і торгів.</p>
+            </div>
           </div>
-          <div class="news-field">
-            <strong>Що необхідно зробити?</strong>
-            <p>Перевірити актуальність проєктів договорів та скоригувати внутрішній регламент УО.</p>
+          <div class="news-card-footer">
+            <button class="btn btn-primary btn-sm open-consult-modal" data-service="Консультація щодо змін у Prozorro (жовтень 2026)" style="width: 100%;">
+              <i class="fas fa-arrow-right"></i> Консультація юриста по Prozorro
+            </button>
           </div>
         </div>
 
-        <!-- Новина 2 -->
+        <!-- Новина 2: Prozorro.Продажі та Мала приватизація -->
         <div class="news-card">
-          <div class="news-date"><i class="far fa-calendar-alt"></i> 02 жовтня 2026</div>
-          <h3 class="news-title">Практика АМКУ щодо виправлення невідповідностей протягом 24 годин</h3>
-          <div class="news-field">
-            <strong>Короткий опис:</strong>
-            <p>Аналіз свіжих рішень Постійно діючої адміністративної колегії АМКУ щодо меж правила «24 годин».</p>
+          <div class="news-card-header">
+            <div class="news-card-top-meta">
+              <span class="news-badge"><i class="fas fa-hand-holding-dollar"></i> Prozorro.Продажі</span>
+              <span class="news-date"><i class="far fa-calendar-alt"></i> Осінь 2026</span>
+            </div>
+            <h3 class="news-title">Реформа малої приватизації, санкційні активи та нові ліміти внесків</h3>
           </div>
-          <div class="news-field">
-            <strong>Що змінилося?</strong>
-            <p>Чітко розмежовано, які документи підпадають під усунення невідповідностей, а які є незмінними (ціна/технічна специфікація).</p>
+          <div class="news-lead">
+            Суттєві оновлення у системі Prozorro.Продажі щодо відчуження майна, оренди та обов'язкових ставок внесків:
           </div>
-          <div class="news-field">
-            <strong>Кого це стосується?</strong>
-            <p>Учасників, чиї пропозиції мають незначні формальні зауваження, та замовників під час розгляду.</p>
+          <div class="news-subitems-list">
+            <div class="news-subitem">
+              <div class="news-subitem-title"><i class="fas fa-gavel"></i> 1. Скасування позаконкурентного викупу орендарями</div>
+              <p>Уряд суттєво змінив правила малої приватизації державного та комунального майна відповідно до <strong>Закону № 4360-IX</strong>.</p>
+              <ul class="news-subitem-bullets">
+                <li><strong>Що змінилося:</strong> Скасовано багаторічну практику прямого викупу об'єктів орендарями через механізм так званих «невід'ємних поліпшень».</li>
+                <li><strong>Нове правило:</strong> Відтепер приватизація таких активів відбувається виключно через відкриті електронні аукціони в системі Prozorro.Продажі. Нові правила захищають інвестиції орендарів, але змушують їх змагатися за об'єкт на ринкових умовах.</li>
+              </ul>
+            </div>
+            <div class="news-subitem">
+              <div class="news-subitem-title"><i class="fas fa-building-circle-check"></i> 2. Оновлені правила реалізації санкційних активів</div>
+              <p>У 2026 році Кабмін та Фонд держмайна запровадили нову процедуру продажу активів підсанкційних осіб. В електронній системі оновлено алгоритми автооголошення торгів. Перші пули майна (квартири, автомобілі, комерційні активи) успішно виставляються на аукціони.</p>
+            </div>
+            <div class="news-subitem">
+              <div class="news-subitem-title"><i class="fas fa-calculator"></i> 3. Оновлення внесків та лімітів (МЗП 8 647 грн / ПМ 3 328 грн)</div>
+              <p>Діють нові розміри реєстраційних, гарантійних внесків та лімітів, розраховані згідно з актуальним рівнем МЗП та прожиткового мінімуму:</p>
+              <ul class="news-subitem-bullets">
+                <li><strong>Земельні торги:</strong> Реєстраційний внесок (РВ) становить 864,70 грн;</li>
+                <li><strong>Мала приватизація:</strong> Реєстраційний внесок становить 1 729,40 грн;</li>
+                <li><strong>Велика приватизація:</strong> Реєстраційний внесок зафіксовано на рівні 86 470 грн;</li>
+                <li><strong>Процедури банкрутства:</strong> Комісія за участь становить 4% (для лотів вартістю до 8 647 000 грн).</li>
+              </ul>
+            </div>
+            <div class="news-subitem">
+              <div class="news-subitem-title"><i class="fas fa-university"></i> 4. Державні банки торгують виключно через Prozorro.Продажі</div>
+              <p>Повноцінно діє закон, який зобов'язує державні банки здійснювати продаж та оренду активів (зокрема NPL-кредитів, заставного майна та власної нерухомості) виключно через Prozorro.Продажі, що виключає будь-які кулуарні домовленості.</p>
+            </div>
           </div>
-          <div class="news-field">
-            <strong>Що необхідно зробити?</strong>
-            <p>При отриманні вимоги про виправлення негайно звернутися до юриста для підготовки вичерпної відповіді вчасно.</p>
+          <div class="news-card-footer">
+            <button class="btn btn-primary btn-sm open-consult-modal" data-service="Супровід торгів Prozorro.Продажі (приватизація/оренда)" style="width: 100%;">
+              <i class="fas fa-arrow-right"></i> Супровід в Prozorro.Продажі
+            </button>
           </div>
         </div>
 
-        <!-- Новина 3 -->
+        <!-- Новина 3: Арештоване майно, АРМА та виконавче провадження -->
         <div class="news-card">
-          <div class="news-date"><i class="far fa-calendar-alt"></i> 25 вересня 2026</div>
-          <h3 class="news-title">Розширення переліку товарів у Prozorro Market</h3>
-          <div class="news-field">
-            <strong>Короткий опис:</strong>
-            <p>Адміністратор електронного каталогу додав нові категорії продукції для швидких закупівель.</p>
+          <div class="news-card-header">
+            <div class="news-card-top-meta">
+              <span class="news-badge"><i class="fas fa-scale-balanced"></i> Арештоване майно & АРМА</span>
+              <span class="news-date"><i class="far fa-calendar-alt"></i> 2026 рік</span>
+            </div>
+            <h3 class="news-title">Цифровізація виконавчого провадження, Закон № 4833-IX та реалізація АРМА</h3>
           </div>
-          <div class="news-field">
-            <strong>Що змінилося?</strong>
-            <p>Спрощено кваліфікацію постачальників для участі у запитах цінових пропозицій.</p>
+          <div class="news-lead">
+            Законодавство України у сфері арештованого майна та виконавчого провадження зазнало фундаментальних цифрових та процедурних змін:
           </div>
-          <div class="news-field">
-            <strong>Кого це стосується?</strong>
-            <p>Постачальників медичних виробів, пального, продуктів харчування та будівельних матеріалів.</p>
+          <div class="news-subitems-list">
+            <div class="news-subitem">
+              <div class="news-subitem-title"><i class="fas fa-stamp"></i> 1. Реалізація активів АРМА за Постановою № 846 від 01.07.2026</div>
+              <p>З 3 липня 2026 року набрав чинності новий Порядок реалізації арештованих активів:</p>
+              <ul class="news-subitem-bullets">
+                <li><strong>Тільки через електронні торги:</strong> Продаж активів АРМА (у кримінальних справах чи справах про необґрунтовані активи) в Україні здійснюється виключно на е-аукціонах. Цінні папери — на організованих ринках.</li>
+                <li><strong>Прозорі правила:</strong> Гарантійний внесок — 10% (повторний — 20%), крок аукціону — 1%, винагорода оператора — 4%.</li>
+                <li><strong>Ринкова оцінка:</strong> Заборонено продаж за ціною, нижчою від визначеної у звіті про ринкову оцінку.</li>
+              </ul>
+            </div>
+            <div class="news-subitem">
+              <div class="news-subitem-title"><i class="fas fa-network-wired"></i> 2. Радикальна цифровізація та Закон № 4833-IX</div>
+              <p>З 23 жовтня 2026 року запускаються норми євроінтеграційного Закону № 4833-IX через систему АСВП:</p>
+              <ul class="news-subitem-bullets">
+                <li><strong>Миттєвий пошук та блокування коштів:</strong> Прямий інформобмін між виконавцями та банками в режимі реального часу. Арешт накладається не пізніше наступного робочого дня після відкриття рахунку.</li>
+                <li><strong>Під контролем е-гаманці:</strong> Арешт поширюється на рахунки, будь-які електронні гроші та цифрові гаманці.</li>
+                <li><strong>Зв'язок реєстрів:</strong> Єдиний реєстр боржників інтегровано з реєстрами нерухомості, землі та авто для миттєвого блокування відчуження.</li>
+              </ul>
+            </div>
+            <div class="news-subitem">
+              <div class="news-subitem-title"><i class="fas fa-unlock"></i> 3. Автоматичне зняття арешту за дрібні борги</div>
+              <p>Якщо борг не перевищує 10 МЗП (86 470 грн у 2026 році), після повної сплати система АСВП автоматично формує та надсилає банку постанову про зняття арешту. Банк зобов'язаний розблокувати кошти не пізніше наступного дня.</p>
+            </div>
+            <div class="news-subitem">
+              <div class="news-subitem-title"><i class="fas fa-house-chimney-user"></i> 4. Нові ліміти та підвищений захист єдиного житла</div>
+              <ul class="news-subitem-bullets">
+                <li><strong>Дозволена сума для витрат:</strong> Боржник-фізособа має право витрачати з арештованого рахунку 17 294 грн на місяць (за офіційною заявою виконавцю).</li>
+                <li><strong>Захист від виселення:</strong> Поріг заборгованості для примусового продажу єдиного житла боржника підвищено з 20 до 50 МЗП (окрім майна в заставі/іпотеці за цим боргом).</li>
+              </ul>
+            </div>
           </div>
-          <div class="news-field">
-            <strong>Що необхідно зробити?</strong>
-            <p>Пройти кваліфікацію в каталог та підготувати шаблони для швидкої подачі пропозицій.</p>
+          <div class="news-card-footer">
+            <button class="btn btn-primary btn-sm open-consult-modal" data-service="Супровід: Арештоване майно та виконавче провадження" style="width: 100%;">
+              <i class="fas fa-arrow-right"></i> Консультація: Арештоване майно
+            </button>
           </div>
         </div>
 
@@ -1272,11 +2037,15 @@
             <div class="form-group">
               <label for="contactCategory" class="form-label">Тематика звернення</label>
               <select id="contactCategory" name="service" class="form-control">
-                <option value="Учасник торгів — тендер під ключ">Для Учасників торгів (Тендер під ключ / Оскарження в АМКУ)</option>
-                <option value="Замовник торгів — супровід процедури">Для Замовників торгів (Планування, ТД, Аудит, Захист від ДАСУ)</option>
-                <option value="Prozorro.Sale аукціони">Prozorro.Sale (Електронні аукціони, оренда, майно)</option>
-                <option value="Загальна юридична практика">Юридичні послуги (Господарське, цивільне, корпоративне право)</option>
-                <option value="Термінове оскарження">Термінове оскарження / консультація</option>
+                <option value="Prozorro: Учасникам — тендер під ключ / Оскарження в АМКУ">Prozorro: Учасникам (Відкриті торги, Оскарження в АМКУ, ДАСУ)</option>
+                <option value="Prozorro: Замовникам — супровід процедури / ТД / Аудит">Prozorro: Замовникам (Тендерна документація, Аудит, Договори)</option>
+                <option value="Prozorro.Sale: для організаторів торгів та оренди">Prozorro.Sale: Організаторам продажів та оренди майна</option>
+                <option value="Prozorro.Sale: для покупців та орендарів майна">Prozorro.Sale: Покупцям та орендарям майна / Складні активи</option>
+                <option value="Арештоване майно / активи (СЕТАМ та Prozorro.Продажі)">Арештоване майно / активи (СЕТАМ та Prozorro.Продажі від 5 000 грн)</option>
+                <option value="Сертифікація продукції">Сертифікація продукції (від 10 000 грн)</option>
+                <option value="Сертифікація систем управління ISO (9001, 14001, 22000, 45001)">Сертифікація систем ISO (9001, 14001, 22000, 45001 від 15 000 грн)</option>
+                <option value="Лабораторні випробування продукції">Випробування продукції у лабораторії (від 5 000 грн)</option>
+                <option value="Юридичний супровід та судова практика">Юридичний супровід (Господарське, цивільне, сімейне право, суди)</option>
               </select>
             </div>
 
@@ -1382,12 +2151,13 @@
         <div class="footer-col">
           <h4>Послуги</h4>
           <ul class="footer-links">
-            <li><a href="#services">• Тендерне право</a></li>
-            <li><a href="#services">• Господарське право</a></li>
-            <li><a href="#services">• Цивільне право</a></li>
-            <li><a href="#services">• Сімейне право</a></li>
-            <li><a href="#services">• Корпоративне право</a></li>
-            <li><a href="#prozorro-sale">• Prozorro.Sale</a></li>
+            <li><a href="#prozorro">• Публічні закупівлі (Prozorro)</a></li>
+            <li><a href="#prozorro-sale">• Prozorro.Продажі та оренда</a></li>
+            <li><a href="#certification">• Сертифікація продукції</a></li>
+            <li><a href="#certification">• Сертифікація ISO</a></li>
+            <li><a href="#law-practice">• Юридичний супровід та суди</a></li>
+            <li><a href="#law-practice">• Господарське та цивільне право</a></li>
+            <li><a href="#law-practice">• Корпоративне та сімейне право</a></li>
           </ul>
         </div>
 
